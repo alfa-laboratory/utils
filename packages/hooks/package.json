@@ -1,14 +1,14 @@
 {
   "name": "@alfalab/hooks",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "common hooks",
-  "main": "index.js",
+  "main": "dist/index.js",
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "rollup -c",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "types": "dts-bundle-generator -c dts.json"
   },
   "keywords": [],
   "author": "",

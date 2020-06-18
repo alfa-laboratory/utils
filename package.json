@@ -22,7 +22,11 @@
     "lerna": "^3.20.2",
     "module-alias": "^2.2.2",
     "rollup": "^2.16.1",
+    "rollup-plugin-dts": "^1.4.7",
     "rollup-plugin-terser": "^6.1.0",
     "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "dts-bundle-generator": "^4.3.0"
   }
 }

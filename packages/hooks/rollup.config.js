@@ -1,4 +1,5 @@
 import ts from '@rollup/plugin-typescript';
+import dts from 'rollup-plugin-dts';
 import { terser as uglify } from 'rollup-plugin-terser';
 
 export default {
