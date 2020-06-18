@@ -1,6 +1,6 @@
 {
-  "name": "utils",
-  "version": "1.0.0",
+  "name": "@alfalab/utils-root",
+  "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/alfa-laboratory/utils/issues"
   },
-  "homepage": "https://github.com/alfa-laboratory/utils#readme"
+  "homepage": "https://github.com/alfa-laboratory/utils#readme",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^4.1.2",
+    "lerna": "^3.20.2",
+    "module-alias": "^2.2.2",
+    "rollup": "^2.16.1",
+    "rollup-plugin-terser": "^6.1.0",
+    "typescript": "^3.9.5"
+  }
 }
