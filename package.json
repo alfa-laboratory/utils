@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "start-storybook -p 9009",
+    "build-storybook": "build-storybook",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -18,12 +20,52 @@
   },
   "homepage": "https://github.com/alfa-laboratory/utils#readme",
   "devDependencies": {
+    "@babel/core": "^7.10.3",
     "@rollup/plugin-typescript": "^4.1.2",
+    "@storybook/addon-actions": "^6.0.0-beta.36",
+    "@storybook/addon-docs": "^5.3.19",
+    "@storybook/addon-links": "^6.0.0-beta.36",
+    "@storybook/react": "^6.0.0-beta.36",
+    "@types/jest": "^26.0.3",
+    "arui-presets-lint": "^4.2.2",
+    "babel-loader": "^8.1.0",
+    "jest": "^26.1.0",
     "lerna": "^3.20.2",
     "module-alias": "^2.2.2",
+    "react-is": "^16.13.1",
     "rollup": "^2.16.1",
     "rollup-plugin-dts": "^1.4.7",
     "rollup-plugin-terser": "^6.1.0",
+    "ts-jest": "^26.1.1",
     "typescript": "^3.9.5"
+  },
+  "dependencies": {},
+  "eslintConfig": {
+    "extends": "./node_modules/arui-presets-lint/eslint/index.js",
+    "rules": {}
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "prettier-eslint --write",
+      "eslint"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-push": "CI=true yarn test"
+    }
+  },
+  "prettier": "arui-presets-lint/prettier",
+  "commitlint": {
+    "extends": [
+      "./node_modules/arui-presets-lint/commitlint"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
