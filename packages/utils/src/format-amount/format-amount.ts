@@ -50,7 +50,7 @@ type AmountType = {
     minority: number;
 
     /**
-     * default - не отображаем копейки, если из значение 0
+     * default - не отображаем копейки, если их значение 0
      * withZeroMinorPart - отображаем копейки, даже если их значение равно 0
      */
     view?: 'default' | 'withZeroMinorPart';
