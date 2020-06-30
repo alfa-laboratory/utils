@@ -16,5 +16,4 @@ describe('pluralize', () => {
         expect(plurWrap(5)).toBe('карт');
         expect(plurWrap(10)).toBe('карт');
     });
-
 });

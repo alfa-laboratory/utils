@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "start-storybook -p 9009",
-    "build-storybook": "build-storybook",
+    "build:storybook": "build-storybook",
     "test": "jest"
   },
   "repository": {
