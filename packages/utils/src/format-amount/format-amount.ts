@@ -1,4 +1,4 @@
-import { CurrencyCodes, getCurrencySymbol } from '../currency-codes';
+import { CurrencyCodes, getCurrencySymbol } from '../currency';
 
 const AMOUNT_MAJOR_PART_SIZE = 3;
 const AMOUNT_SPLIT_CODE_FROM = 4;

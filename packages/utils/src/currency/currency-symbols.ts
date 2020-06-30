@@ -1,4 +1,4 @@
-export const CURRENCY_CODES = {
+export const CURRENCY_SYMBOLS = {
     ALL: '\u004c\u0065\u006b',
     AFN: '\u060b',
     ARS: '\u0024',
@@ -114,13 +114,3 @@ export const CURRENCY_CODES = {
     YER: '\ufdfc',
     ZWD: '\u005a\u0024',
 };
-
-export type CurrencyCodes = keyof typeof CURRENCY_CODES;
-
-/**
- * Возвращает знак валюты по ISO коду.
- *
- * @param currencyCode Код валюты.
- */
-export const getCurrencySymbol = (currencyCode: CurrencyCodes): string =>
-    CURRENCY_CODES[currencyCode];
