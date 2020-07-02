@@ -1,6 +1,6 @@
 name: Tests
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   test:
@@ -15,5 +15,7 @@ jobs:
         node-version: 14
     - name: install dependencies
       run: npm i
+    - name: bootstrap lerna
+      run: npm run setup
     - name: run tests
       run: npm run test
