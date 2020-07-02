@@ -16,13 +16,13 @@
     "author": "",
     "license": "MIT",
     "devDependencies": {
-        "@types/react": "^16.9.41",
         "@alfalab/data": "^0.1.0",
-        "dts-bundle-generator": "^4.3.0",
-        "react": "^16.13.1"
+        "dts-bundle-generator": "^4.3.0"
     },
     "peerDependencies": {
-        "@alfalab/data": "^0.1.0",
-        "react": ">=16.13.1"
+        "@alfalab/data": "^0.1.0"
+    },
+    "publishConfig": {
+        "access": "public"
     }
 }
