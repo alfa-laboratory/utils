@@ -1,3 +1,4 @@
+import { CurrencyCodes } from '@alfalab/data';
 import { getCurrencySymbol } from '../currency';
 
 const AMOUNT_MAJOR_PART_SIZE = 3;
@@ -17,7 +18,7 @@ export const AMOUNT_MAJOR_MINOR_PARTS_SEPARATOR = ',';
  * равняется пяти по требованию гайдлайнов: https://design.alfabank.ru/patterns/amount. Пример: 2900 - не разбивается,
  * 29 000 - разбивается.
  */
-export const splitAmount = (
+const splitAmount = (
     amount: string,
     partSize = 3,
     splitter: string = THINSP,
@@ -60,7 +61,9 @@ type AmountType = {
  * Форматирует значение суммы
  * согласно гайдлайну https://design.alfabank.ru/patterns/amount
  */
-export const formatAmount = ({ value, currency, minority, view }: AmountType) => {
+export const formatAmount = ({
+    value, currency, minority, view,
+}: AmountType) => {
     if (value === null) {
         return {
             majorPart: '',

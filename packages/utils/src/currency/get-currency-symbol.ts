@@ -1,4 +1,4 @@
-import { CURRENCY_SYMBOLS, CurrencyCodes } from '@alfalab/data';
+import { currency, CurrencyCodes } from '@alfalab/data';
 
 /**
  * Возвращает знак валюты по ISO коду.
@@ -6,4 +6,4 @@ import { CURRENCY_SYMBOLS, CurrencyCodes } from '@alfalab/data';
  * @param currencyCode Код валюты.
  */
 export const getCurrencySymbol = (currencyCode: CurrencyCodes): string =>
-    CURRENCY_SYMBOLS[currencyCode];
+    currency.CURRENCY_SYMBOLS[currencyCode];

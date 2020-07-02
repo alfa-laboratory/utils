@@ -1,6 +1,5 @@
-import { CURRENCY_SYMBOLS } from '@alfalab/data';
-
+import { currency } from '@alfalab/data';
 
 export function getAllCurrencyCodesList() {
-    return Object.keys(CURRENCY_SYMBOLS);
+    return Object.keys(currency.CURRENCY_SYMBOLS);
 }

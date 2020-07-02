@@ -15,7 +15,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-      "@alfalab/data": ""
+      "@alfalab/data": "^0.1.0"
   },
   "devDependencies": {
     "dts-bundle-generator": "^4.3.0",
