@@ -1,13 +1,9 @@
-name: CI
+name: Tests
 
-on:
-  push:
-    branches: [ master, develop ]
-  pull_request:
-    branches: [ master, develop ]
+on: [push, pull_request]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,8 +12,8 @@ jobs:
     - name: Setup environment
       uses: actions/setup-node@v1.4.2
       with:
-        node-version: 12
+        node-version: 14
     - name: install dependencies
       run: npm i
     - name: run tests
-      run: npm run tests
+      run: npm run test
