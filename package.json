@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "start-storybook -p 9009",
+    "setup": "lerna bootstrap",
     "build:storybook": "build-storybook",
     "test": "jest"
   },
