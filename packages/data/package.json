@@ -1,20 +1,21 @@
 {
-  "name": "@alfalab/data",
-  "version": "0.0.0",
-  "description": "common data",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "build": "rollup -c",
-    "types": "dts-bundle-generator --config dts.json"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "devDependencies": {
-    "dts-bundle-generator": "^4.3.0"
-  }
+    "name": "@alfalab/data",
+    "version": "0.1.0",
+    "description": "common data",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "yarn build:ts && yarn build:dts",
+        "build:ts": "rollup -c",
+        "build:dts": "dts-bundle-generator --no-banner --config dts.json"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "dts-bundle-generator": "^4.3.0"
+    }
 }
