@@ -38,7 +38,7 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.2",
+    "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.5",
     "jest": "^26.1.0",
     "lerna": "^3.22.1",
@@ -47,11 +47,11 @@
     "prettier-eslint": "^11.0.0",
     "prettier-eslint-cli": "^5.0.0",
     "react-is": "^16.13.1",
-    "rollup": "^2.18.1",
+    "rollup": "^2.18.2",
     "rollup-plugin-dts": "^1.4.7",
     "rollup-plugin-terser": "^6.1.0",
     "ts-jest": "^26.1.1",
-    "typescript": "^3.9.5"
+    "typescript": "^3.9.6"
   },
   "dependencies": {},
   "eslintConfig": {
