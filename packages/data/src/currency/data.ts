@@ -115,4 +115,4 @@ export const CURRENCY_SYMBOLS = {
     ZWD: '\u005a\u0024',
 };
 
-export type CurrencySymbolsCodes = keyof typeof CURRENCY_SYMBOLS;
+export type CurrencyCodes = keyof typeof CURRENCY_SYMBOLS;

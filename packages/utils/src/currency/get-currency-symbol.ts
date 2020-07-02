@@ -1,5 +1,4 @@
-import { CURRENCY_SYMBOLS } from './currency-symbols';
-import { CurrencyCodes } from './currency-codes';
+import { CURRENCY_SYMBOLS, CurrencyCodes } from '@alfalab/data';
 
 /**
  * Возвращает знак валюты по ISO коду.
