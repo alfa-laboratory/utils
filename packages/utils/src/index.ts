@@ -1,3 +1,4 @@
 export * from './pluralize';
 export * from './format-amount';
-export * from './currency';
+export * from './get-all-currency-codes';
+export * from './get-currency-symbol';

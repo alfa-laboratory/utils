@@ -1,13 +1,4 @@
-import { splitAmount, formatAmount } from './format-amount';
-
-test('splitAmount', () => {
-    expect(splitAmount('100', 3, ' ')).toBe('100');
-    expect(splitAmount('1000', 3, ' ')).toBe('1000');
-    expect(splitAmount('10000', 3, ' ')).toBe('10 000');
-    expect(splitAmount('100000', 3, ' ')).toBe('100 000');
-    expect(splitAmount('1000000', 3, ' ')).toBe('1 000 000');
-    expect(splitAmount('10000000', 3, ' ')).toBe('10 000 000');
-});
+import { formatAmount } from './util';
 
 describe('formatAmount', () => {
     it('should return not empty minorPart if passed view = "default" and value has zero minor part', () => {
@@ -49,7 +40,9 @@ describe('formatAmount', () => {
     });
 
     it('should format correctly', () => {
-        const { majorPart, minorPart, formated, formatedWithCurrency } = formatAmount({
+        const {
+            majorPart, minorPart, formated, formatedWithCurrency,
+        } = formatAmount({
             view: 'default',
             value: 12345,
             currency: 'USD',
@@ -63,7 +56,9 @@ describe('formatAmount', () => {
     });
 
     it('should add "−" to majorPart if passed negative value', () => {
-        const { majorPart, minorPart, formated, formatedWithCurrency } = formatAmount({
+        const {
+            majorPart, minorPart, formated, formatedWithCurrency,
+        } = formatAmount({
             view: 'default',
             value: -12345,
             currency: 'RUR',

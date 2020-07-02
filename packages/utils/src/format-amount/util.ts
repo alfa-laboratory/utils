@@ -1,5 +1,6 @@
 import { CurrencyCodes } from '@alfalab/data';
-import { getCurrencySymbol } from '../currency';
+import { getCurrencySymbol } from '../get-currency-symbol';
+import { splitAmount } from './split-amount';
 
 const AMOUNT_MAJOR_PART_SIZE = 3;
 const AMOUNT_SPLIT_CODE_FROM = 4;
@@ -7,32 +8,6 @@ const NEGATIVE_AMOUNT_SYMBOL = '−';
 
 export const THINSP = String.fromCharCode(8201); // &thinsp;
 export const AMOUNT_MAJOR_MINOR_PARTS_SEPARATOR = ',';
-
-/**
- * Дробит мажорную часть суммы на части по указанному символу.
- *
- * @param amount Сумма для разбивки на части
- * @param partSize Размер частей суммы
- * @param splitter Символ, разбивающий части суммы
- * @param splitFrom Длина суммы, начиная с которой необходимо осуществлять разбивку. По-умолчанию длина
- * равняется пяти по требованию гайдлайнов: https://design.alfabank.ru/patterns/amount. Пример: 2900 - не разбивается,
- * 29 000 - разбивается.
- */
-const splitAmount = (
-    amount: string,
-    partSize = 3,
-    splitter: string = THINSP,
-    splitFrom = 5,
-): string => {
-    const splittingRegExp = `\\B(?=(\\d{${partSize}})+(?!\\d))`;
-
-    // Если длина суммы меньше требуемой, не форматируем сумму
-    if (amount.length < splitFrom) {
-        return amount;
-    }
-
-    return amount.replace(new RegExp(splittingRegExp, 'g'), splitter);
-};
 
 type AmountType = {
     /**
