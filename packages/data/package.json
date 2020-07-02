@@ -17,5 +17,8 @@
     "license": "MIT",
     "devDependencies": {
         "dts-bundle-generator": "^4.3.0"
+    },
+    "publishConfig": {
+        "access": "public"
     }
 }

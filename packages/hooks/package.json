@@ -22,5 +22,8 @@
     },
     "peerDependencies": {
         "react": ">=16.13.1"
+    },
+    "publishConfig": {
+        "access": "public"
     }
 }
