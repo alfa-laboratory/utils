@@ -1,7 +1,7 @@
 {
-  "name": "@alfalab/hooks",
-  "version": "0.6.0",
-  "description": "common hooks",
+  "name": "@alfalab/data",
+  "version": "0.0.0",
+  "description": "common data",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -15,11 +15,6 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "dts-bundle-generator": "^4.3.0",
-    "@types/react": "^16.9.41",
-    "react": "^16.13.1"
-  },
-  "peerDependencies": {
-    "react": ">=16.13.1"
+    "dts-bundle-generator": "^4.3.0"
   }
 }
