@@ -7,9 +7,11 @@ describe('formatAccount', () => {
         expect(result).toBe('40817 810 2 1021 0285256');
     });
 
-    it('should return empty string if value isn\'t provided', () => {
-        const result = formatAccount('40817810210210285256');
+    it('should return empty string if value is falsy', () => {
+        // @ts-expect-error
+        expect(formatAccount(null)).toBe('');
 
-        expect(result).toBe('');
+        // @ts-expect-error
+        expect(formatAccount()).toBe('');
     });
 });

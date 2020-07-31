@@ -8,10 +8,10 @@ const ACCOUNT_FORMAT = '$1 $2 $3 $4 $5';
  *
  * @param value Номер счёта.
  */
-export function formatAccount(value: string | number) {
+export function formatAccount(value: string) {
     if (!value) {
         return '';
     }
 
-    return `${value}`.replace(ACCOUNT_SPLIT_REGEX, ACCOUNT_FORMAT);
+    return value.replace(ACCOUNT_SPLIT_REGEX, ACCOUNT_FORMAT);
 }
