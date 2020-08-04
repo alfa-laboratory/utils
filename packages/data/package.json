@@ -16,7 +16,7 @@
     "author": "",
     "license": "MIT",
     "devDependencies": {
-        "dts-bundle-generator": "^4.3.0"
+        "dts-bundle-generator": "^5.3.0"
     },
     "publishConfig": {
         "access": "public"
