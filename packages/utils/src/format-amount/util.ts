@@ -1,5 +1,5 @@
 import { CurrencyCodes } from '@alfalab/data';
-import { getCurrencySymbol } from '../get-currency-symbol';
+import { getCurrencySymbol } from '..';
 import { splitAmount } from './split-amount';
 
 const AMOUNT_MAJOR_PART_SIZE = 3;
