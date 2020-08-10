@@ -14,12 +14,12 @@ function getValue<T>(list: QueryList<T>): T[] {
     ).filter(Boolean) as any;
 }
 
-export function useMedia<T>(qeuries: Params<T>, defaultValue: T): T[] {
+export function useMedia<T>(list: Params<T>, defaultValue: T): T[] {
     const [value, setValue] = React.useState<T[]>([defaultValue]);
     const [mediaQueryList, setMediaQueryList] = React.useState<QueryList<T>>([]);
 
     React.useEffect(() => {
-        const queryList: QueryList<T> = qeuries.map(
+        const queryList: QueryList<T> = list.map(
             ([x, y]) => [x, window.matchMedia(y)],
         );
 
