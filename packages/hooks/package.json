@@ -1,6 +1,6 @@
 {
     "name": "@alfalab/hooks",
-    "version": "0.6.0",
+    "version": "0.7.0",
     "description": "common hooks",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -10,7 +10,7 @@
     "scripts": {
         "build": "yarn build:ts && yarn build:dts",
         "build:ts": "rollup -c",
-        "build:dts": "dts-bundle-generator --no-banner --config dts.json"
+        "build:dts": "dts-bundle-generator --no-banner --no-check --config dts.json"
     },
     "keywords": [],
     "author": "",

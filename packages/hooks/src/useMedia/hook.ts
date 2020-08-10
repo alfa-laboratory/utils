@@ -25,6 +25,7 @@ export function useMedia<T>(qeuries: Params<T>, defaultValue: T): T[] {
 
         setMediaQueryList(queryList);
         setValue(getValue(queryList));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     React.useEffect(() => {
