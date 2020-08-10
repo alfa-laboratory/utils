@@ -11,5 +11,7 @@ export function useEventCallback(fn: (...args: any) => any) {
         ref.current = fn;
     });
 
+    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+    // @ts-ignore
     return React.useCallback((...args) => (0, ref.current)(...args), []);
 }
