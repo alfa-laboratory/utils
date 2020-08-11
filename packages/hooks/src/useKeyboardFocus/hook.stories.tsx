@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { useKeyboardFocus } from '.';
 
 export default { title: 'Hooks/useKeyboardFocus' };
@@ -13,8 +13,8 @@ const focusStyle: React.CSSProperties = {
 };
 
 const Component: React.FC = () => {
-    const ref = useRef<HTMLButtonElement>(null);
-    const { focused } = useKeyboardFocus(ref);
+    const ref = React.useRef<HTMLButtonElement>(null);
+    const [focused] = useKeyboardFocus(ref);
 
     return (
         <button type="button" ref={ ref } style={ focused ? focusStyle : style }>

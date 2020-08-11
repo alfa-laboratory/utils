@@ -1,16 +1,14 @@
-import {
-    useState, useEffect, useCallback, RefObject,
-} from 'react';
+import React from 'react';
 
 let prevInputMethod: 'mouse' | 'keyboard';
 
-const handleKeyDown = () => {
+function handleKeyDown() {
     prevInputMethod = 'keyboard';
-};
+}
 
-const handleMouseDown = () => {
+function handleMouseDown() {
     prevInputMethod = 'mouse';
-};
+}
 
 /**
  * Навешивает несколько глобальных обработчиков и отслеживает метод ввода - мышь или клавиатура.
@@ -22,20 +20,20 @@ function addGlobalListeners() {
     document.addEventListener('touchstart', handleMouseDown);
 }
 
-export function useKeyboardFocus(ref: RefObject<HTMLElement>) {
-    const [focused, setFocused] = useState(false);
+export function useKeyboardFocus(ref: React.RefObject<HTMLElement>) {
+    const [focused, setFocused] = React.useState(false);
 
-    const handleFocus = useCallback(() => {
+    const handleFocus = React.useCallback(() => {
         if (prevInputMethod === 'keyboard') {
             setFocused(true);
         }
     }, []);
 
-    const handleBlur = useCallback(() => {
+    const handleBlur = React.useCallback(() => {
         setFocused(false);
     }, []);
 
-    useEffect(() => {
+    React.useEffect(() => {
         const node = ref.current;
 
         if (node) {
@@ -51,9 +49,7 @@ export function useKeyboardFocus(ref: RefObject<HTMLElement>) {
         };
     }, [handleBlur, handleFocus, ref]);
 
-    useEffect(addGlobalListeners, []);
+    React.useEffect(addGlobalListeners, []);
 
-    return {
-        focused,
-    };
+    return [focused];
 }

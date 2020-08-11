@@ -3,7 +3,7 @@
  */
 
 import '@testing-library/jest-dom';
-import React, { useRef } from 'react';
+import React from 'react';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
@@ -12,8 +12,8 @@ import { useKeyboardFocus } from '.';
 describe('useKeyboardFocus', () => {
     const renderComponent = () => {
         const FocusableButton = () => {
-            const ref = useRef<HTMLButtonElement>(null);
-            const { focused } = useKeyboardFocus(ref);
+            const ref = React.useRef<HTMLButtonElement>(null);
+            const [focused] = useKeyboardFocus(ref);
 
             return (
                 <button type="button" ref={ ref }>
@@ -58,8 +58,8 @@ describe('useKeyboardFocus', () => {
 
     it('should pass `focused=false` for non-interactive ref element', async () => {
         const NonFocusableComponent = () => {
-            const ref = useRef<HTMLDivElement>(null);
-            const { focused } = useKeyboardFocus(ref);
+            const ref = React.useRef<HTMLDivElement>(null);
+            const [focused] = useKeyboardFocus(ref);
 
             return <div ref={ ref }>{ focused ? 'focused' : '' }</div>;
         };
