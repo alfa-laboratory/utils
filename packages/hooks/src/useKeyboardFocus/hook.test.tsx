@@ -57,14 +57,14 @@ describe('useKeyboardFocus', () => {
     });
 
     it('should pass `focused=false` for non-interactive ref element', async () => {
-        const FocusableButton = () => {
+        const NonFocusableComponent = () => {
             const ref = useRef<HTMLDivElement>(null);
             const { focused } = useKeyboardFocus(ref);
 
             return <div ref={ ref }>{ focused ? 'focused' : '' }</div>;
         };
 
-        const { queryByText } = render(<FocusableButton />);
+        const { queryByText } = render(<NonFocusableComponent />);
 
         userEvent.tab();
 
