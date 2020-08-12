@@ -16,7 +16,7 @@ const focusStyle: React.CSSProperties = {
 const Component: React.FC<{ inputMethod: InputMethod }> = ({
     inputMethod = 'keyboard',
 }) => {
-    const ref = React.useRef<HTMLDivElement>(null);
+    const ref = React.useRef<HTMLSpanElement>(null);
     const [focused] = useFocus(inputMethod, ref);
 
     return (
