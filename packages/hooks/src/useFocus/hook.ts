@@ -1,12 +1,19 @@
 import React from 'react';
 
-let prevInputMethod: 'mouse' | 'keyboard';
+// TODO: добавить touch метод
+export type InputMethod = 'keyboard' | 'mouse';
+
+let prevInputMethod: InputMethod;
 
 function handleKeyDown() {
     prevInputMethod = 'keyboard';
 }
 
 function handleMouseDown() {
+    prevInputMethod = 'mouse';
+}
+
+function handleTouchstart() {
     prevInputMethod = 'mouse';
 }
 
@@ -17,17 +24,17 @@ function handleMouseDown() {
 function addGlobalListeners() {
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
-    document.addEventListener('touchstart', handleMouseDown);
+    document.addEventListener('touchstart', handleTouchstart);
 }
 
-export function useKeyboardFocus(ref: React.RefObject<HTMLElement>) {
+export function useFocus(inputMethod: InputMethod, ref: React.RefObject<HTMLElement>) {
     const [focused, setFocused] = React.useState(false);
 
     const handleFocus = React.useCallback(() => {
-        if (prevInputMethod === 'keyboard') {
+        if (inputMethod === prevInputMethod) {
             setFocused(true);
         }
-    }, []);
+    }, [inputMethod]);
 
     const handleBlur = React.useCallback(() => {
         setFocused(false);
