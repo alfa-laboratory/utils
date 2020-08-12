@@ -26,7 +26,6 @@ const Component: React.FC<{ inputMethod: InputMethod }> = ({
             tabIndex={ inputMethod === 'keyboard' ? 0 : -1 }
             style={ focused ? focusStyle : style }
         >
-            { focused && 'focused ' }
             focus me by
             { ' ' }
             { inputMethod }
