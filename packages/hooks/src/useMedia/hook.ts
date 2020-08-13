@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable no-confusing-arrow */
 import React from 'react';
 
 type Query<T> = [T, string];
@@ -10,6 +9,7 @@ type Params<T> = Array<Query<T>>;
 
 function getValue<T>(list: QueryList<T>): T[] {
     return list.map(
+        // eslint-disable-next-line no-confusing-arrow
         ([value, query]) => query.matches ? value : null,
     ).filter(Boolean) as any;
 }
