@@ -15,7 +15,7 @@ describe('useFocus', () => {
     const renderComponent = (method: InputMethod = 'keyboard') => {
         const FocusableButton = () => {
             const ref = React.useRef<HTMLButtonElement>(null);
-            const [focused] = useFocus(method, ref);
+            const [focused] = useFocus(ref.current, method);
 
             return (
                 <button type="button" ref={ ref } data-test-id={ DATA_TEST_ID }>
@@ -62,7 +62,7 @@ describe('useFocus', () => {
         it('should pass `focused=false` for non-interactive ref element', async () => {
             const FocusableButton = () => {
                 const ref = React.useRef<HTMLDivElement>(null);
-                const [focused] = useFocus('keyboard', ref);
+                const [focused] = useFocus(ref.current, 'keyboard');
 
                 return <div ref={ ref }>{ focused ? 'focused' : '' }</div>;
             };
@@ -109,7 +109,7 @@ describe('useFocus', () => {
         it('should pass `focused=false` for non-interactive ref element', async () => {
             const NonFocusableComponent = () => {
                 const ref = React.useRef<HTMLDivElement>(null);
-                const [focused] = useFocus('mouse', ref);
+                const [focused] = useFocus(ref.current, 'mouse');
 
                 return (
                     <div ref={ ref } data-test-id={ DATA_TEST_ID }>
