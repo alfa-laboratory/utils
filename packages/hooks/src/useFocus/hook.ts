@@ -13,7 +13,7 @@ function handleMouseDown() {
     prevInputMethod = 'mouse';
 }
 
-function handleTouchstart() {
+function handleTouchStart() {
     prevInputMethod = 'mouse';
 }
 
@@ -24,25 +24,29 @@ function handleTouchstart() {
 function addGlobalListeners() {
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
-    document.addEventListener('touchstart', handleTouchstart);
+    document.addEventListener('touchstart', handleTouchStart);
 }
 
-export function useFocus(inputMethod: InputMethod, ref: React.RefObject<HTMLElement>) {
-    const [focused, setFocused] = React.useState(false);
+/**
+ * Хук устанавливает обработчик собития на focusin и focusout
+ * по конкретному типу события
+ * @param node Элемент на котором установится обработчик (default = document)
+ * @param inputMethod Если параметр не задан, установит обработчик по любому собитыю фокуса
+ */
+export function useFocus(node: Node = document, inputMethod: InputMethod) {
+    const [focus, setFocus] = React.useState(false);
 
     const handleFocus = React.useCallback(() => {
-        if (inputMethod === prevInputMethod) {
-            setFocused(true);
+        if (!inputMethod || inputMethod === prevInputMethod) {
+            setFocus(true);
         }
     }, [inputMethod]);
 
     const handleBlur = React.useCallback(() => {
-        setFocused(false);
+        setFocus(false);
     }, []);
 
     React.useEffect(() => {
-        const node = ref.current;
-
         if (node) {
             node.addEventListener('focusin', handleFocus);
             node.addEventListener('focusout', handleBlur);
@@ -54,9 +58,9 @@ export function useFocus(inputMethod: InputMethod, ref: React.RefObject<HTMLElem
                 node.removeEventListener('focusout', handleBlur);
             }
         };
-    }, [handleBlur, handleFocus, ref]);
+    }, [handleBlur, handleFocus, node]);
 
     React.useEffect(addGlobalListeners, []);
 
-    return [focused];
+    return [focus];
 }
