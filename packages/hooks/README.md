@@ -31,4 +31,9 @@ https://github.com/facebook/react/issues/14099#issuecomment-440013892
 
 ### useClickOutside
 
-Подписка за событие `mousedown`, `touchstart`. При нажатии вне элемента вызывает переданный callback
+Подписка на событие `mousedown`, `touchstart`. При нажатии вне элемента вызывает переданный callback
+
+### useFocus
+
+Подписка на событие `focusin`, `focusout` для конкретного события фокуса (клавиатура/мышка).
+Возвращает true/false о состоянии фокуса на элементе
