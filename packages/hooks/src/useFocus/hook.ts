@@ -33,7 +33,7 @@ function addGlobalListeners() {
  * @param node Элемент на котором установится обработчик (default = document)
  * @param inputMethod Если параметр не задан, установит обработчик по любому собитыю фокуса
  */
-export function useFocus(node: Node = document, inputMethod: InputMethod) {
+export function useFocus(node: HTMLElement | Document | null = document, inputMethod: InputMethod) {
     const [focus, setFocus] = React.useState(false);
 
     const handleFocus = React.useCallback(() => {
