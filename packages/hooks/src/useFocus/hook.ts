@@ -33,7 +33,7 @@ function addGlobalListeners() {
  * @param node Элемент на котором установится обработчик (default = document)
  * @param inputMethod Если параметр не задан, установит обработчик по любому собитыю фокуса
  */
-export function useFocus(node: HTMLElement | Document | null = document, inputMethod: InputMethod) {
+export function useFocus<T extends HTMLElement>(ref: React.MutableRefObject<T> | React.RefObject<T>, inputMethod?: InputMethod) {
     const [focus, setFocus] = React.useState(false);
 
     const handleFocus = React.useCallback(() => {
@@ -47,6 +47,8 @@ export function useFocus(node: HTMLElement | Document | null = document, inputMe
     }, []);
 
     React.useEffect(() => {
+        const node = ref.current;
+
         if (node) {
             node.addEventListener('focusin', handleFocus);
             node.addEventListener('focusout', handleBlur);
@@ -58,7 +60,7 @@ export function useFocus(node: HTMLElement | Document | null = document, inputMe
                 node.removeEventListener('focusout', handleBlur);
             }
         };
-    }, [handleBlur, handleFocus, node]);
+    }, [handleBlur, handleFocus, ref]);
 
     React.useEffect(addGlobalListeners, []);
 
