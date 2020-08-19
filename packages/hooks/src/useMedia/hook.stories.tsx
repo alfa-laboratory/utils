@@ -32,7 +32,7 @@ const Component: React.FC = () => {
     );
 };
 
-export const Basic = () => (
+export const Basic: React.FC = () => (
     <div>
         <Component />
     </div>
