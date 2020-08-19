@@ -31,7 +31,7 @@ function addGlobalListeners() {
  * Хук устанавливает обработчик собития на focusin и focusout
  * по конкретному типу события
  * @param node Элемент на котором установится обработчик (default = document)
- * @param inputMethod Если параметр не задан, установит обработчик по любому собитыю фокуса
+ * @param inputMethod Если параметр не задан, установит обработчик по любому событию фокуса
  */
 export function useFocus<T extends HTMLElement>(ref: React.MutableRefObject<T> | React.RefObject<T>, inputMethod?: InputMethod) {
     const [focus, setFocus] = React.useState(false);
