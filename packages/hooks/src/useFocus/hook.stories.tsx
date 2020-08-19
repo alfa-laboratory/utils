@@ -17,7 +17,7 @@ const Component: React.FC<{ inputMethod: InputMethod }> = ({
     inputMethod = 'keyboard',
 }) => {
     const ref = React.useRef<HTMLSpanElement>(null);
-    const [focused] = useFocus(inputMethod, ref);
+    const [focused] = useFocus(ref, inputMethod);
 
     return (
         <span
