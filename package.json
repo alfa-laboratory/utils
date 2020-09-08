@@ -29,8 +29,8 @@
     "@storybook/addon-docs": "^6.0.21",
     "@storybook/addon-links": "^6.0.21",
     "@storybook/react": "^6.0.21",
-    "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.0.2",
+    "@testing-library/react-hooks": "^3.4.1",
     "@testing-library/user-event": "^12.1.3",
     "@types/jest": "^26.0.13",
     "@typescript-eslint/eslint-plugin": "^4.1.0",
@@ -38,7 +38,7 @@
     "arui-presets-lint": "5.1.2",
     "babel-loader": "^8.1.0",
     "eslint": "^7.8.1",
-    "eslint-config-airbnb-typescript": "^9.0.0",
+    "eslint-config-airbnb-typescript": "^10.0.0",
     "eslint-import-resolver-typescript": "^2.3.0",
     "eslint-plugin-cypress": "2.11.1",
     "eslint-plugin-import": "^2.22.0",
@@ -52,6 +52,7 @@
     "prettier": "^2.1.1",
     "prettier-eslint": "^11.0.0",
     "prettier-eslint-cli": "^5.0.0",
+    "react-test-renderer": "^16.13.1",
     "rollup": "^2.26.11",
     "rollup-plugin-terser": "^7.0.2",
     "stylelint": "^13.7.0",
@@ -62,7 +63,7 @@
   "eslintConfig": {
     "extends": "./node_modules/arui-presets-lint/eslint/index.js",
     "parserOptions": {
-        "project": "./tsconfig.json"
+      "project": "./tsconfig.json"
     },
     "rules": {
       "import/no-extraneous-dependencies": "off"
