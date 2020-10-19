@@ -5,8 +5,10 @@ export type InputMethod = 'keyboard' | 'mouse';
 
 let prevInputMethod: InputMethod;
 
-function handleKeyDown() {
-    prevInputMethod = 'keyboard';
+function handleKeyDown(event: KeyboardEvent) {
+    if (event.key === 'Tab') {
+        prevInputMethod = 'keyboard';
+    }
 }
 
 function handleMouseDown() {
@@ -28,7 +30,7 @@ function addGlobalListeners() {
 }
 
 /**
- * Хук устанавливает обработчик собития на focusin и focusout
+ * Хук устанавливает обработчик события на focusin и focusout
  * по конкретному типу события
  * @param node Элемент на котором установится обработчик (default = document)
  * @param inputMethod Если параметр не задан, установит обработчик по любому событию фокуса
