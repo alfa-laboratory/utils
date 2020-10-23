@@ -15,13 +15,13 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@alfalab/data": "^0.2.0",
     "@types/react": "^16.9.41",
-    "@alfalab/data": "^0.1.0",
     "dts-bundle-generator": "^4.3.0",
     "react": "^16.13.1"
   },
   "peerDependencies": {
-    "@alfalab/data": "^0.1.0",
+    "@alfalab/data": "^0.2.0",
     "react": ">=16.13.1"
   }
 }
