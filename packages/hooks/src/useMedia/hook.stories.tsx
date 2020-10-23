@@ -1,8 +1,7 @@
 import React from 'react';
-import { action } from '@storybook/addon-actions';
-import { useClickOutside } from '.';
+import { useMedia } from '.';
 
-export default { title: 'Hooks/useClickOutside' };
+export default { title: 'Hooks/useMedia' };
 
 const style: React.CSSProperties = {
     display: 'flex',
@@ -17,19 +16,23 @@ const style: React.CSSProperties = {
 
 const Component: React.FC = () => {
     const ref = React.useRef(null);
-    useClickOutside(ref, action('outside click'));
+    const [head] = useMedia([
+        [1, '(min-width: 400px)'],
+        [2, '(min-width: 400px)'],
+        [3, '(min-width: 400px)'],
+        [4, '(min-width: 400px)'],
+    ], 5);
 
     return (
-        <div
-            ref={ ref }
-            style={ style }
-        >
-            Component area
+        <div ref={ ref } style={ style }>
+            { head }
+            -
+            Column
         </div>
     );
 };
 
-export const Basic = () => (
+export const Basic: React.FC = () => (
     <div>
         <Component />
     </div>

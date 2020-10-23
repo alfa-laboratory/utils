@@ -1,27 +1,28 @@
 {
-  "name": "@alfalab/utils",
-  "version": "0.0.0",
-  "description": "common utils",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "build": "rollup -c",
-    "types": "dts-bundle-generator --config dts.json"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "devDependencies": {
-    "@alfalab/data": "^0.2.0",
-    "@types/react": "^16.9.41",
-    "dts-bundle-generator": "^4.3.0",
-    "react": "^16.13.1"
-  },
-  "peerDependencies": {
-    "@alfalab/data": "^0.2.0",
-    "react": ">=16.13.1"
-  }
+    "name": "@alfalab/utils",
+    "version": "0.4.1",
+    "description": "common utils",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "yarn build:ts && yarn build:dts",
+        "build:ts": "rollup -c",
+        "build:dts": "dts-bundle-generator --no-banner --config dts.json"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "@alfalab/data": "^0.2.0",
+        "dts-bundle-generator": "^5.4.0"
+    },
+    "peerDependencies": {
+        "@alfalab/data": "^0.2.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
 }
