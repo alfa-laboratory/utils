@@ -8,21 +8,21 @@ export type Country = {
     areaCodes: string[] | null;
 };
 
-export type CountriesMap = { [iso2: string]: Country };
+export type CountriesHash = { [iso2: string]: Country };
 
-const formatCountry = (country: CountryRaw): Country => ({
-    name: country[1],
-    iso2: country[2],
-    dialCode: country[3],
-    priority: country[4],
-    areaCodes: country[5] || null,
+const formatCountry = ([_, name, iso2, dialCode, priority, areaCodes]: CountryRaw): Country => ({
+    name,
+    iso2,
+    dialCode,
+    priority,
+    areaCodes: areaCodes ?? null,
 });
 
-export const getCountries = () =>
+export const getCountries = (): Country[] =>
     countries.map(formatCountry).sort((a, b) => a.name.localeCompare(b.name));
 
-export const getCountriesMap = () =>
-    countries.reduce((acc: CountriesMap, country) => {
+export const getCountriesHash = (): CountriesHash =>
+    countries.reduce((acc: CountriesHash, country) => {
         const iso2 = country[2];
 
         acc[iso2] = formatCountry(country);
