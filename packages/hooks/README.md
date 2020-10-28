@@ -33,6 +33,10 @@ https://github.com/facebook/react/issues/14099#issuecomment-440013892
 
 Подписка на событие `mousedown`, `touchstart`. При нажатии вне элемента вызывает переданный callback
 
+### useKeydownOutside
+
+Подписка на событие `keydown`. При нажатии вне элемента вызывает переданный callback
+
 ### useFocus
 
 Подписка на событие `focusin`, `focusout` для конкретного события фокуса (клавиатура/мышка).
