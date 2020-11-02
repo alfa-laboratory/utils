@@ -16,11 +16,11 @@
     "author": "",
     "license": "MIT",
     "devDependencies": {
-        "@alfalab/data": "^0.1.0",
+        "@alfalab/data": "^0.2.0",
         "dts-bundle-generator": "^5.4.0"
     },
     "peerDependencies": {
-        "@alfalab/data": "^0.1.0"
+        "@alfalab/data": "^0.2.0"
     },
     "publishConfig": {
         "access": "public"

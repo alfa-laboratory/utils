@@ -13,7 +13,7 @@
         "build:dts": "dts-bundle-generator --no-banner --config dts.json"
     },
     "keywords": [],
-    "author": "",
+    "author": "Evgeniy Troynov",
     "license": "MIT",
     "devDependencies": {
         "dts-bundle-generator": "^5.4.0"
