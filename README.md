@@ -56,14 +56,14 @@ yarn add @alfalab/utils
 
 ### Хуки
 
-| название | назначение | аргументы |
+| название | назначение |   ссылки  |
 |----------|------------|-----------|
 | `useClickOutside` | Обработчик который срабатывает при клике вне контейнера на который передана ссылка | [демо]() \| [документация](https://github.com/alfa-laboratory/utils/blob/develop/packages/hooks/src/useClickOutside/docs.md) |
-| `useDimensions` |            | [демо]() \| [документация]() |
-| `useEventCallback` |            | [демо]() \| [документация]() |
-| `useFocus` |            | [демо]() \| [документация]() |
-| `useMedia` |            | [демо]() \| [документация]() |
-| `usePrevious` |            | [демо]() \| [документация]() |
+| `useDimensions` |            | [демо]() \| [документация](https://github.com/alfa-laboratory/utils/blob/develop/packages/hooks/src/useDimensions/docs.md) |
+| `useEventCallback` | https://github.com/facebook/react/issues/14099#issuecomment-440013892 | [демо]() \| - |
+| `useFocus` | Хук устанавливает обработчик события на focusin и focusout | [демо]() \| [документация](https://github.com/alfa-laboratory/utils/blob/develop/packages/hooks/src/useFocus/docs.md) |
+| `useMedia` | Обработчик срабатывает когда переданный медиа запрос является валидным | [демо]() \| [документация](https://github.com/alfa-laboratory/utils/blob/develop/packages/hooks/src/useMedia/docs.md) |
+| `usePrevious` | Позволяет сохранять предыдущее значение до рендера | [демо]() \| [документация](https://github.com/alfa-laboratory/utils/blob/develop/packages/hooks/src/usePrevious/docs.md) |
 
 ### Утилиты
 
