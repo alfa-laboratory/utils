@@ -25,14 +25,16 @@ export function useCountdown({ endDate, onStart, onEnd }: UseCountdownArgs): Use
     }, []);
 
     useEffect(() => {
-        if (seconds === 0) {
+        if (seconds <= 0) {
             clear();
 
             if (onEnd) {
                 onEnd();
             }
         }
-    }, [onEnd, seconds]);
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [seconds]);
 
     return [seconds];
 }
