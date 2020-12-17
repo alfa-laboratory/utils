@@ -1,6 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 import { UseCountdownArgs, UseCountdownHook } from './types';
 
+/**
+ * Хук обратного отсчёта времени.
+ * Возвращает оставшееся количество секунд до определённой даты.
+ *
+ * @param params.endDate - Дата окончания
+ * @param params.onStart - Функция, которая будет вызвана при запуске счётчика
+ * @param params.onEnd - Функция, которая будет вызвана при окончании счётчика
+ */
 export function useCountdown({ endDate, onStart, onEnd }: UseCountdownArgs): UseCountdownHook {
     const intervalId = useRef<ReturnType<typeof setInterval> | null>(null);
     const [seconds, setSeconds] = useState(differenceInSeconds(endDate, new Date()));
