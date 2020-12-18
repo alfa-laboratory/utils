@@ -1,4 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
+import {
+    useEffect, useRef, useCallback, useState,
+} from 'react';
 import { UseCountdownArgs, UseCountdownHook } from './types';
 
 /**
@@ -14,7 +16,7 @@ export function useCountdown({ endDate, onStart, onEnd }: UseCountdownArgs): Use
     const [seconds, setSeconds] = useState(differenceInSeconds(endDate, new Date()));
 
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    const clear = () => clearInterval(intervalId.current!);
+    const clear = useCallback(() => clearInterval(intervalId.current!), []);
 
     useEffect(() => {
         if (onStart) {
@@ -29,8 +31,7 @@ export function useCountdown({ endDate, onStart, onEnd }: UseCountdownArgs): Use
         }, 1000);
 
         return clear;
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [clear]);
 
     useEffect(() => {
         if (seconds <= 0) {
