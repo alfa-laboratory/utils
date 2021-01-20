@@ -51,10 +51,10 @@ decamelize@^1.2.0:
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
   integrity sha1-9lNNFRSCabIDUue+4m9QH5oZEpA=
 
-dts-bundle-generator@^5.3.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/dts-bundle-generator/-/dts-bundle-generator-5.3.0.tgz#f51187f7904285f3d517b392d051045ff6b32789"
-  integrity sha512-PevcqtUQDsVs1FoXNEEvBgXWP2pNXT/booL+ufNcKSynEP8l01ebI9MgamECljThi+MHyjxYEbwGx+95TvigMQ==
+dts-bundle-generator@^5.6.0:
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/dts-bundle-generator/-/dts-bundle-generator-5.6.0.tgz#1dd2ba58ae80c2650326f8e9d3a27f2a50c1ce9e"
+  integrity sha512-4fbEB6gxZRNjpc0A/tu/L9uiLXB5I7yyxN1dMnFuHDAxLpM+UiHaGfrbpeET+9r2mYAqKm1JX8dOugcgqw5swg==
   dependencies:
     typescript ">=3.0.1"
     yargs "^15.3.1"
