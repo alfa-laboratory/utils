@@ -2,7 +2,7 @@ import { formatAmount } from './util';
 
 describe('formatAmount', () => {
     it('should return not empty minorPart if passed view = "default" and value has zero minor part', () => {
-        const { minorPart, formated, formatedWithCurrency } = formatAmount({
+        const { minorPart, formatted, formattedWithCurrency } = formatAmount({
             view: 'withZeroMinorPart',
             value: 1234500,
             currency: 'RUR',
@@ -10,12 +10,12 @@ describe('formatAmount', () => {
         });
 
         expect(minorPart).toBe('00');
-        expect(formated).toBe('12 345,00');
-        expect(formatedWithCurrency).toBe('12 345,00 ₽');
+        expect(formatted).toBe('12 345,00');
+        expect(formattedWithCurrency).toBe('12 345,00 ₽');
     });
 
     it('should return empty minorPart if passed view = "default" and value has zero minor part', () => {
-        const { minorPart, formated, formatedWithCurrency } = formatAmount({
+        const { minorPart, formatted, formattedWithCurrency } = formatAmount({
             view: 'default',
             value: 1234500,
             currency: 'RUR',
@@ -23,8 +23,8 @@ describe('formatAmount', () => {
         });
 
         expect(minorPart).toBe('');
-        expect(formated).toBe('12 345');
-        expect(formatedWithCurrency).toBe('12 345 ₽');
+        expect(formatted).toBe('12 345');
+        expect(formattedWithCurrency).toBe('12 345 ₽');
     });
 
     it('should return zero majorPart if passed value < minority', () => {
@@ -41,7 +41,7 @@ describe('formatAmount', () => {
 
     it('should format correctly', () => {
         const {
-            majorPart, minorPart, formated, formatedWithCurrency,
+            majorPart, minorPart, formatted, formattedWithCurrency,
         } = formatAmount({
             view: 'default',
             value: 12345,
@@ -51,13 +51,13 @@ describe('formatAmount', () => {
 
         expect(majorPart).toBe('123');
         expect(minorPart).toBe('45');
-        expect(formated).toBe('123,45');
-        expect(formatedWithCurrency).toBe('123,45 $');
+        expect(formatted).toBe('123,45');
+        expect(formattedWithCurrency).toBe('123,45 $');
     });
 
     it('should add "−" to majorPart if passed negative value', () => {
         const {
-            majorPart, minorPart, formated, formatedWithCurrency,
+            majorPart, minorPart, formatted, formattedWithCurrency,
         } = formatAmount({
             view: 'default',
             value: -12345,
@@ -67,7 +67,7 @@ describe('formatAmount', () => {
 
         expect(majorPart).toBe('−123');
         expect(minorPart).toBe('45');
-        expect(formated).toBe('−123,45');
-        expect(formatedWithCurrency).toBe('−123,45 ₽');
+        expect(formatted).toBe('−123,45');
+        expect(formattedWithCurrency).toBe('−123,45 ₽');
     });
 });

@@ -43,9 +43,9 @@ export const formatAmount = ({
         return {
             majorPart: '',
             minorPart: '',
-            formated: '',
+            formatted: '',
             currencySymbol: getCurrencySymbol(currency),
-            formatedWithCurrency: THINSP + getCurrencySymbol(currency),
+            formattedWithCurrency: THINSP + getCurrencySymbol(currency),
         };
     }
 
@@ -80,7 +80,7 @@ export const formatAmount = ({
         majorPart: majorPartFormatted,
         minorPart,
         currencySymbol: getCurrencySymbol(currency),
-        formated: formattedValueStr,
-        formatedWithCurrency: formattedValueStr + THINSP + getCurrencySymbol(currency),
+        formatted: formattedValueStr,
+        formattedWithCurrency: formattedValueStr + THINSP + getCurrencySymbol(currency),
     };
 };
