@@ -60,9 +60,6 @@
     "ts-jest": "^26.4.4",
     "typescript": "^4.1.3"
   },
-  "dependencies": {
-    "text-mask-core": "^5.1.2"
-  },
   "eslintConfig": {
     "extends": "./node_modules/arui-presets-lint/eslint/index.js",
     "parserOptions": {
