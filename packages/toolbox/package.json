@@ -1,0 +1,29 @@
+{
+    "name": "@alfalab/toolbox",
+    "version": "0.0.0",
+    "description": "",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "yarn build:ts && yarn build:dts",
+        "build:ts": "rollup -c",
+        "build:dts": "dts-bundle-generator --no-banner --no-check --config dts.json"
+    },
+    "keywords": [],
+    "author": "Evgeniy Troynov",
+    "license": "MIT",
+    "dependencies": {
+        "@alfalab/data": "^0.2.0",
+        "@alfalab/hooks": "^1.1.1",
+        "@alfalab/utils": "^0.5.0"
+    },
+    "devDependencies": {
+        "dts-bundle-generator": "^5.4.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}

@@ -1,4 +1,4 @@
-export const CURRENCY_SYMBOLS = {
+const CURRENCY_SYMBOLS = {
     ALL: '\u004c\u0065\u006b',
     AFN: '\u060b',
     ARS: '\u0024',
@@ -101,8 +101,8 @@ export const CURRENCY_SYMBOLS = {
     TWD: '\u004e\u0054\u0024',
     THB: '\u0e3f',
     TTD: '\u0054\u0054\u0024',
-    TRY: '\u20a4',
-    TRL: '\u20a4',
+    TRY: '\u20ba',
+    TRL: '\u20ba',
     TVD: '\u0024',
     UAH: '\u20b4',
     GBP: '\u00a3',
@@ -116,3 +116,9 @@ export const CURRENCY_SYMBOLS = {
 };
 
 export type CurrencyCodes = keyof typeof CURRENCY_SYMBOLS;
+
+export const currency: {
+    CURRENCY_SYMBOLS: typeof CURRENCY_SYMBOLS;
+} = {
+    CURRENCY_SYMBOLS,
+};
