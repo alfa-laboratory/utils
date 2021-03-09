@@ -2,7 +2,7 @@
  * Маскирует номер телефона.
  * Номер должен быть уже отформатирован.
  *
- * @param {String} number Номер телефона
+ * @param {String} number Отформатированный номер телефона
  * @returns {String}
  */
 export function maskPhone(number: string) {
