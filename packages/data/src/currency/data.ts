@@ -7,7 +7,7 @@ const CURRENCY_SYMBOLS = {
     AZN: '\u20bc',
     BSD: '\u0024',
     BBD: '\u0024',
-    BYR: '\u0042\u0072',
+    BYN: '\u0042\u0072',
     BZD: '\u0042\u005a\u0024',
     BMD: '\u0024',
     BOB: '\u0024\u0062',
