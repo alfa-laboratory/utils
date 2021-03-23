@@ -1,4 +1,4 @@
-export default {
+export const keyboardCodes = {
     SPACE: 32,
     BACKSPACE: 8,
     TAB: 9,
