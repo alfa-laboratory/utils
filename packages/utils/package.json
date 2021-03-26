@@ -25,5 +25,8 @@
     },
     "publishConfig": {
         "access": "public"
+    },
+    "dependencies": {
+        "bezier-easing": "^2.1.0"
     }
 }
