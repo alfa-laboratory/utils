@@ -2,6 +2,7 @@ import { formatFileSize } from './util';
 
 describe('formatFileSize', () => {
     const cases = [
+        ['10dd', '0 B'],
         [1, '1 B'],
         [10, '10 B'],
         [100, '100 B'],
@@ -16,6 +17,7 @@ describe('formatFileSize', () => {
         [100000000000, '93.13 GB'],
         [1000000000000, '99+ GB'],
         [10000000000000, '99+ GB'],
+        ['d10000000000000', '0 B'],
     ];
 
     it.each(cases)('formatFileSize(%i)', (fileSize, expected) => {
