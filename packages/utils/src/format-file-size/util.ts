@@ -1,17 +1,19 @@
 const UNITS = ['B', 'KB', 'MB', 'GB'];
 
-const getStringHumanSize = (value: number, factor: number): string => {
+type FileSize = string | number;
+
+const humanizeNumberPartOfFileSize = (value: number, factor: number): string => {
     const maxFactor = UNITS.length - 1;
     if (value > 99 && factor === maxFactor) return '99+';
 
     return `${Number(value.toFixed(2))}`;
 };
 
-const getNumber = (value: string | number): number => {
-    const parsedValue = Number(value);
-    if (Number.isNaN(parsedValue)) return 0;
+const parseFileSize = (fileSize: FileSize): number => {
+    const parsedFileSize = Number(fileSize);
+    if (Number.isNaN(parsedFileSize)) return 0;
 
-    return parsedValue;
+    return parsedFileSize;
 };
 
 /**
@@ -23,11 +25,11 @@ const getNumber = (value: string | number): number => {
  * 1000 B,
  * 93.13 GB,
  * 99+ GB - Если файл превышает 99 GB,
- * 0 B - Если приходит строка не число
+ * 0 B - Если приходит строка, которую невозможно привести к числу
  */
-export const formatFileSize = (size: string | number): string => {
+export const formatFileSize = (fileSize: FileSize): string => {
     const maxFactor = UNITS.length - 1;
-    let humanSize: number = getNumber(size);
+    let humanSize: number = parseFileSize(fileSize);
     let factor = 0;
 
     while (humanSize >= 1024 && factor < maxFactor) {
@@ -35,5 +37,5 @@ export const formatFileSize = (size: string | number): string => {
         factor += 1;
     }
 
-    return `${getStringHumanSize(humanSize, factor)} ${UNITS[factor]}`;
+    return `${humanizeNumberPartOfFileSize(humanSize, factor)} ${UNITS[factor]}`;
 };
