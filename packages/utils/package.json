@@ -1,6 +1,6 @@
 {
     "name": "@alfalab/utils",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "description": "common utils",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -16,7 +16,7 @@
     "author": "",
     "license": "MIT",
     "devDependencies": {
-        "@alfalab/data": "^0.4.0",
+        "@alfalab/data": "^0.4.1",
         "dts-bundle-generator": "^5.6.0",
         "rollup": "^2.38.0"
     },
@@ -25,5 +25,6 @@
     },
     "publishConfig": {
         "access": "public"
-    }
+    },
+    "gitHead": "10dd0711fab88c3173da9cd72abe50194559d021"
 }

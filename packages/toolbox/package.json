@@ -1,6 +1,6 @@
 {
     "name": "@alfalab/toolbox",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -25,5 +25,6 @@
     },
     "publishConfig": {
         "access": "public"
-    }
+    },
+    "gitHead": "10dd0711fab88c3173da9cd72abe50194559d021"
 }

@@ -1,6 +1,6 @@
 {
     "name": "@alfalab/hooks",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "common hooks",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -16,8 +16,8 @@
     "author": "",
     "license": "MIT",
     "devDependencies": {
-        "dts-bundle-generator": "^5.6.0",
         "@types/react": "^17.0.3",
+        "dts-bundle-generator": "^5.6.0",
         "react": "^17.0.2"
     },
     "peerDependencies": {
@@ -25,5 +25,6 @@
     },
     "publishConfig": {
         "access": "public"
-    }
+    },
+    "gitHead": "10dd0711fab88c3173da9cd72abe50194559d021"
 }
