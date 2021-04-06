@@ -2,5 +2,15 @@
     "packages": ["packages/*"],
     "version": "independent",
     "npmClient": "yarn",
-    "useWorkspaces": true
+    "useWorkspaces": true,
+    "command": {
+        "version": {
+            "message": "chore(*): publish",
+            "ignoreChanges": [
+                "*.stories.*",
+                "**/__snapshots__/**",
+                "*.test.*"
+            ]
+        }
+    }
 }
