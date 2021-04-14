@@ -6,3 +6,4 @@ export * from './useFocus';
 export * from './useKeydownOutside';
 export * from './useMedia';
 export * from './usePrevious';
+export * from './useDidUpdateEffect';
