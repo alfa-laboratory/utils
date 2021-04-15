@@ -7,3 +7,4 @@ export * from './crop-account-number';
 export * from './pluralize';
 export * from './get-countries';
 export * from './format-phone';
+export * from './scroll-to';
