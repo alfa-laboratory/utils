@@ -18,15 +18,19 @@ export function useMedia<T>(list: Params<T>, defaultValue: T): T[] {
     const [value, setValue] = React.useState<T[]>([defaultValue]);
     const [mediaQueryList, setMediaQueryList] = React.useState<QueryList<T>>([]);
 
-    React.useEffect(() => {
-        const queryList: QueryList<T> = list.map(
-            ([x, y]) => [x, window.matchMedia(y)],
-        );
+    const isClient = typeof window !== 'undefined';
 
-        setMediaQueryList(queryList);
-        setValue(getValue(queryList));
+    React.useEffect(() => {
+        if (isClient && window.matchMedia) {
+            const queryList: QueryList<T> = list.map(
+                ([x, y]) => [x, window.matchMedia(y)],
+            );
+
+            setMediaQueryList(queryList);
+            setValue(getValue(queryList));
+        }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [isClient]);
 
     React.useEffect(() => {
         const handler = () => {

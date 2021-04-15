@@ -64,6 +64,7 @@ yarn add @alfalab/utils
 | `useFocus` | Хук устанавливает обработчик события на focusin и focusout | [демо]() \| [документация](https://github.com/alfa-laboratory/utils/blob/develop/packages/hooks/src/useFocus/docs.md) |
 | `useMedia` | Обработчик срабатывает когда переданный медиа запрос является валидным | [демо]() \| [документация](https://github.com/alfa-laboratory/utils/blob/develop/packages/hooks/src/useMedia/docs.md) |
 | `usePrevious` | Позволяет сохранять предыдущее значение до рендера | [демо]() \| [документация](https://github.com/alfa-laboratory/utils/blob/develop/packages/hooks/src/usePrevious/docs.md) |
+| `useDidUpdateEffect` | Вызывает коллбэк при изменении значений, переданных в зависимостях. В отличии от useEffect пропускает начальный рендер (аналог ComponentDidUpdate). | []() \| [документация](https://github.com/alfa-laboratory/utils/blob/develop/packages/hooks/src/usePrevious/docs.md) |
 
 ### Утилиты
 
