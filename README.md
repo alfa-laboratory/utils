@@ -65,6 +65,7 @@ yarn add @alfalab/utils
 | `useMedia` | Обработчик срабатывает когда переданный медиа запрос является валидным | [демо]() \| [документация](https://github.com/alfa-laboratory/utils/blob/develop/packages/hooks/src/useMedia/docs.md) |
 | `usePrevious` | Позволяет сохранять предыдущее значение до рендера | [демо]() \| [документация](https://github.com/alfa-laboratory/utils/blob/develop/packages/hooks/src/usePrevious/docs.md) |
 | `useDidUpdateEffect` | Вызывает коллбэк при изменении значений, переданных в зависимостях. В отличии от useEffect пропускает начальный рендер (аналог ComponentDidUpdate). | []() \| [документация](https://github.com/alfa-laboratory/utils/blob/develop/packages/hooks/src/usePrevious/docs.md) |
+| `useImageLoadingState` | Возвращает результат загрузки картинки. | []() \| [документация](https://github.com/alfa-laboratory/utils/blob/develop/packages/hooks/src/useImageLoadingState/docs.md) |
 
 ### Утилиты
 
