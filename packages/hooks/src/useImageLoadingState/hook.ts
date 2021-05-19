@@ -18,7 +18,7 @@ export function useImageLoadingState({ src }: { src: string | undefined }): stri
         let active = true;
         const image = new Image();
 
-        image.src = src;
+        image.srcset = src;
         image.onload = () => {
             if (!active) {
                 return;
