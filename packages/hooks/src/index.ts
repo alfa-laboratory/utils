@@ -7,3 +7,4 @@ export * from './useKeydownOutside';
 export * from './useMedia';
 export * from './usePrevious';
 export * from './useDidUpdateEffect';
+export * from './useImageLoadingState';
