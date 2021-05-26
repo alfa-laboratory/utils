@@ -1,5 +1,5 @@
 export type UseImageLoadingStateArgs = {
-  src?: string;
+  src: string;
 };
 
 export enum UseLoadingStates {

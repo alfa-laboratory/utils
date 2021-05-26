@@ -13,30 +13,26 @@ export function useImageLoadingState({ src }: UseImageLoadingStateArgs): UseLoad
     useEffect(() => {
         let active = true;
 
-        if (src) {
-            setLoadingState(UseLoadingStates.LOADING);
+        setLoadingState(UseLoadingStates.LOADING);
 
-            const image = new Image();
+        const image = new Image();
 
-            image.onload = function() {
-                if (!active) {
-                    return;
-                }
-                setLoadingState(UseLoadingStates.LOADED);
-            };
+        image.onload = function() {
+            if (!active) {
+                return;
+            }
+            setLoadingState(UseLoadingStates.LOADED);
+        };
 
-            image.onerror = () => {
-                if (!active) {
-                    return;
-                }
-                setLoadingState(UseLoadingStates.ERROR);
-            };
-
-            image.srcset = src;
-        } else {
+        image.onerror = () => {
+            if (!active) {
+                return;
+            }
             setLoadingState(UseLoadingStates.ERROR);
-        }
+        };
 
+        image.srcset = src;
+        
         return () => {
             active = false;
         };
