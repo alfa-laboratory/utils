@@ -1,41 +1,46 @@
 import { useEffect, useState } from 'react';
 
+import { UseImageLoadingStateArgs, UseLoadingStates } from './types';
+
 /**
  * Возвращает результат загрузки изображения
- * @param {string | undefined} src url изображения
- * @return {string} результат загрузки (loading | loaded | error)
+ * @param params.src url изображения
+ * @return результат загрузки (loading | loaded | error)
  */
-export function useImageLoadingState({ src }: { src: string | undefined }): string {
-    const [loaded, setLoaded] = useState<'loading' | 'loaded' | 'error'>('loading');
+export function useImageLoadingState({ src }: UseImageLoadingStateArgs): UseLoadingStates {
+    const [loadingState, setLoadingState] = useState<UseLoadingStates>(UseLoadingStates.LOADING);
 
     useEffect(() => {
-        if (!src) {
-            return undefined;
-        }
-
-        setLoaded('loading');
-
         let active = true;
-        const image = new Image();
 
-        image.srcset = src;
-        image.onload = () => {
-            if (!active) {
-                return;
-            }
-            setLoaded('loaded');
-        };
-        image.onerror = () => {
-            if (!active) {
-                return;
-            }
-            setLoaded('error');
-        };
+        if (src) {
+            setLoadingState(UseLoadingStates.LOADING);
+
+            const image = new Image();
+
+            image.onload = function() {
+                if (!active) {
+                    return;
+                }
+                setLoadingState(UseLoadingStates.LOADED);
+            };
+
+            image.onerror = () => {
+                if (!active) {
+                    return;
+                }
+                setLoadingState(UseLoadingStates.ERROR);
+            };
+
+            image.srcset = src;
+        } else {
+            setLoadingState(UseLoadingStates.ERROR);
+        }
 
         return () => {
             active = false;
         };
     }, [src]);
 
-    return loaded;
+    return loadingState;
 }
