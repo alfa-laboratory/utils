@@ -84,6 +84,7 @@ const CURRENCY_SYMBOLS = {
     QAR: '\ufdfc',
     RON: '\u006c\u0065\u0069',
     RUR: '\u20bd',
+    RUB: '\u20bd',
     SHP: '\u00a3',
     SAR: '\ufdfc',
     RSD: '\u0414\u0438\u043d\u002e',
