@@ -6,6 +6,7 @@ export * from './format-phone';
 export * from './get-all-currency-codes';
 export * from './get-countries';
 export * from './get-currency-symbol';
+export * from './is-overflown';
 export * from './pluralize';
 export * from './seconds-to-time';
 export * from './split-amount';
