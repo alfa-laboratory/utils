@@ -10,3 +10,4 @@ export * from './is-overflown';
 export * from './pluralize';
 export * from './seconds-to-time';
 export * from './split-amount';
+export * from './is-valid-card-number';
