@@ -34,9 +34,9 @@ jobs:
                   token: ${{ secrets.NPM_TOKEN }}
 
             - name: Create release
-              run: yarn release
+              run: |
+                  lerna version --conventional-commits --no-commit-hooks --yes --force-git-tag
+                  git push origin master
+                  lerna publish from-git --yes
               env:
                   GITHUB_TOKEN: ${{ secrets.PERMISSION_GITHUB_TOKEN }}
-
-            - name: Publish packages
-              run: lerna publish from-git --yes
