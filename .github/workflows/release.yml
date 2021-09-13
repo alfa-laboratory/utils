@@ -13,6 +13,8 @@ jobs:
 
         steps:
             - uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
 
             - name: Setup dependencies
               run: yarn --pure-lockfile
@@ -39,6 +41,8 @@ jobs:
                   token: ${{ secrets.NPM_TOKEN }}
 
             - name: Publish
-              run: lerna publish from-git --yes && git push --follow-tags
+              run: |
+                  lerna publish from-git --yes
+                  git push --follow-tags
               env:
                   GITHUB_TOKEN: ${{ secrets.PERMISSION_GITHUB_TOKEN }}
