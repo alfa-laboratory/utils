@@ -1,0 +1,42 @@
+name: Release
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    build:
+        env:
+            CI: true
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: Setup dependencies
+              run: yarn
+
+            - name: Setup lerna
+              run: yarn setup
+
+            - name: Build packages
+              run: yarn build
+
+            - name: Configure CI Git User
+              run: |
+                  git config --global user.email ds@alfabank.ru
+                  git config --global user.name alfa-bot
+
+            - name: Set NPM Token
+              uses: filipstefansson/set-npm-token-action@v1
+              with:
+                  token: ${{ secrets.NPM_TOKEN }}
+
+            - name: Create release
+              run: yarn release
+              env:
+                  GITHUB_TOKEN: ${{ secrets.PERMISSION_GITHUB_TOKEN }}
+
+            - name: Publish packages
+              run: lerna publish from-git --yes
