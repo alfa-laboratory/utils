@@ -15,7 +15,7 @@ jobs:
             - uses: actions/checkout@v2
 
             - name: Setup dependencies
-              run: yarn
+              run: yarn --pure-lockfile
 
             - name: Setup lerna
               run: yarn setup
@@ -28,15 +28,17 @@ jobs:
                   git config --global user.email ds@alfabank.ru
                   git config --global user.name alfa-bot
 
+            - name: Create release
+              run: lerna version --conventional-commits --no-commit-hooks --yes --force-git-tag --no-push
+              env:
+                  GITHUB_TOKEN: ${{ secrets.PERMISSION_GITHUB_TOKEN }}
+
             - name: Set NPM Token
               uses: filipstefansson/set-npm-token-action@v1
               with:
                   token: ${{ secrets.NPM_TOKEN }}
 
-            - name: Create release
-              run: |
-                  lerna version --conventional-commits --no-commit-hooks --yes --force-git-tag
-                  git push origin master
-                  lerna publish from-git --yes
+            - name: Publish
+              run: lerna publish from-git --yes && git push --follow-tags
               env:
                   GITHUB_TOKEN: ${{ secrets.PERMISSION_GITHUB_TOKEN }}

@@ -31,7 +31,7 @@
 Установка основной библиотеки:
 
 ```bash
-npm i @alfalab/toolbox
+yarn add @alfalab/toolbox
 ```
 
 или
@@ -43,7 +43,7 @@ yarn add @alfalab/utils
 Установка отдельного модуля ( например, если вам нужны только утилиты )
 
 ```bash
-npm i @alfalab/utils
+yarn add @alfalab/utils
 ```
 
 или

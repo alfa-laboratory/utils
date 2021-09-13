@@ -12,8 +12,6 @@
         "setup": "lerna bootstrap",
         "build:storybook": "build-storybook",
         "build": "lerna exec yarn build",
-        "release": "lerna version --conventional-commits --no-commit-hooks --yes --force-git-tag",
-        "publish": "lerna publish from-git --yes",
         "test": "jest"
     },
     "repository": {
