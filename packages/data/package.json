@@ -1,6 +1,6 @@
 {
     "name": "@alfalab/data",
-    "version": "0.4.6",
+    "version": "0.4.7",
     "description": "common data",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
