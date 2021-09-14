@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.8](https://github.com/alfa-laboratory/utils/compare/@alfalab/toolbox@0.0.5...@alfalab/toolbox@0.0.8) (2021-09-14)
+
+**Note:** Version bump only for package @alfalab/toolbox
+
+
+
+
+
 ## [0.0.7](https://github.com/alfa-laboratory/utils/compare/@alfalab/toolbox@0.0.5...@alfalab/toolbox@0.0.7) (2021-09-13)
 
 **Note:** Version bump only for package @alfalab/toolbox
