@@ -47,7 +47,6 @@
 
     it('should fire event always when it scrolled to bottom of page', async () => {
         const fn = jest.fn();
-
         const { documentElement } = document;
         
         renderHook(() => useScrolledToBottomOfPage(fn, false));
