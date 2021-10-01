@@ -1,8 +1,8 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { useOnceScrolledToBottomOfPage } from '.';
+import { useScrolledToBottomOfPage } from '.';
 
-export default { title: 'Hooks/useOnceScrolledToBottomOfPage' };
+export default { title: 'Hooks/useScrolledToBottomOfPage' };
 
 const style: React.CSSProperties = {
     display: 'flex',
@@ -17,7 +17,7 @@ const style: React.CSSProperties = {
 };
 
 const Component: React.FC = () => {
-    useOnceScrolledToBottomOfPage(action('scrolled to bottom once'));
+    useScrolledToBottomOfPage(action('scrolled to bottom once'));
 
     return (
         <div style={ style } >

@@ -1,14 +1,16 @@
 import React from 'react';
 import { hasScrolledToBottomOfPage } from '../../../utils/src/has-scrolled-to-bottom-of-page';
 
-export function useOnceScrolledToBottomOfPage(
-    cb: () => void,
+export function useScrolledToBottomOfPage(
+    cb: () => void, once = true
 ): void {
     React.useEffect(() => {
         const handler = () => {
             if (hasScrolledToBottomOfPage()) {
                 cb();
-                document.removeEventListener('scroll', handler);
+                if(once){
+                    document.removeEventListener('scroll', handler);
+                }
             }
         };
 
