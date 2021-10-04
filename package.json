@@ -32,6 +32,7 @@
         "@rollup/plugin-typescript": "^8.1.0",
         "@storybook/addon-actions": "^6.1.14",
         "@storybook/addon-docs": "^6.1.14",
+        "@storybook/addon-knobs": "^6.3.1",
         "@storybook/addon-links": "^6.1.14",
         "@storybook/react": "^6.1.14",
         "@testing-library/dom": "^8.1.0",
