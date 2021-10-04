@@ -1,5 +1,6 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
+import { boolean } from '@storybook/addon-knobs';
 import { useScrolledToBottomOfPage } from '.';
 
 export default { title: 'Hooks/useScrolledToBottomOfPage' };
@@ -17,13 +18,14 @@ const style: React.CSSProperties = {
 };
 
 const Component: React.FC = () => {
-    useScrolledToBottomOfPage(action('scrolled to bottom once'));
+    const once = boolean('once', true);
+    useScrolledToBottomOfPage(action('scrolled to bottom'), once);
 
     return (
         <div style={ style } >
-            Try to scroll to bottom
+            Scroll to bottom
             <br/>
-            Action will fire only once
+            And action will fire
         </div>
     );
 };
