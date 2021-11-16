@@ -974,9 +974,9 @@
     regenerator-runtime "^0.13.4"
 
 "@babel/runtime@^7.4.4", "@babel/runtime@^7.8.7":
-  version "7.15.4"
-  resolved "http://binary:80/artifactory/api/npm/npm/@babel/runtime/-/runtime-7.15.4.tgz#fd17d16bfdf878e6dd02d19753a39fa8a8d9c84a"
-  integrity sha1-/RfRa/34eObdAtGXU6OfqKjZyEo=
+  version "7.16.3"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.16.3.tgz#b86f0db02a04187a3c17caa77de69840165d42d5"
+  integrity sha512-WBwekcqacdY2e9AF/Q7WLFUWmdJGJTkbjqTjoMDgXkVZ3ZRUvOPsLb5KdwISoQVsbP+DQzVZW4Zhci0DvpbNTQ==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -2607,8 +2607,8 @@
 
 "@storybook/addon-knobs@^6.3.1":
   version "6.3.1"
-  resolved "http://binary:80/artifactory/api/npm/npm/@storybook/addon-knobs/-/addon-knobs-6.3.1.tgz#2115c6f0d5759e4fe73d5f25710f4a94ebd6f0db"
-  integrity sha1-IRXG8NV1nk/nPV8lcQ9KlOvW8Ns=
+  resolved "https://registry.yarnpkg.com/@storybook/addon-knobs/-/addon-knobs-6.3.1.tgz#2115c6f0d5759e4fe73d5f25710f4a94ebd6f0db"
+  integrity sha512-2GGGnQSPXXUhHHYv4IW6pkyQlCPYXKYiyGzfhV7Zhs95M2Ban08OA6KLmliMptWCt7U9tqTO8dB5u0C2cWmCTw==
   dependencies:
     copy-to-clipboard "^3.3.1"
     core-js "^3.8.2"
@@ -6090,9 +6090,9 @@ core-js@^3.0.1, core-js@^3.0.4, core-js@^3.1.4, core-js@^3.6.1, core-js@^3.6.5:
   integrity sha512-KPYXeVZYemC2TkNEkX/01I+7yd+nX3KddKwZ1Ww7SKWdI2wQprSgLmrTddT8nw92AjEklTsPBoSdQBhbI1bQ6Q==
 
 core-js@^3.8.2:
-  version "3.18.1"
-  resolved "http://binary:80/artifactory/api/npm/npm/core-js/-/core-js-3.18.1.tgz#289d4be2ce0085d40fc1244c0b1a54c00454622f"
-  integrity sha1-KJ1L4s4AhdQPwSRMCxpUwARUYi8=
+  version "3.19.1"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.19.1.tgz#f6f173cae23e73a7d88fa23b6e9da329276c6641"
+  integrity sha512-Tnc7E9iKd/b/ff7GFbhwPVzJzPztGrChB8X8GLqoYGdEOG8IpLnK1xPyo3ZoO3HsK6TodJS58VGPOxA+hLHQMg==
 
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
@@ -6651,8 +6651,8 @@ dom-converter@^0.2:
 
 dom-helpers@^5.0.1:
   version "5.2.1"
-  resolved "http://binary:80/artifactory/api/npm/npm/dom-helpers/-/dom-helpers-5.2.1.tgz#d9400536b2bf8225ad98fe052e029451ac40e902"
-  integrity sha1-2UAFNrK/giWtmP4FLgKUUaxA6QI=
+  resolved "https://registry.yarnpkg.com/dom-helpers/-/dom-helpers-5.2.1.tgz#d9400536b2bf8225ad98fe052e029451ac40e902"
+  integrity sha512-nRCa7CK3VTrM2NmGkIy4cbK7IZlgBE/PYMn55rrXefr5xXDP0LdtfPnblFDoVdcAfslJ7or6iqAUnx0CCGIWQA==
   dependencies:
     "@babel/runtime" "^7.8.7"
     csstype "^3.0.2"
@@ -10912,8 +10912,8 @@ media-typer@0.3.0:
 
 memoize-one@^5.0.0:
   version "5.2.1"
-  resolved "http://binary:80/artifactory/api/npm/npm/memoize-one/-/memoize-one-5.2.1.tgz#8337aa3c4335581839ec01c3d594090cebe8f00e"
-  integrity sha1-gzeqPEM1WBg57AHD1ZQJDOvo8A4=
+  resolved "https://registry.yarnpkg.com/memoize-one/-/memoize-one-5.2.1.tgz#8337aa3c4335581839ec01c3d594090cebe8f00e"
+  integrity sha512-zYiwtZUcYyXKo/np96AGZAckk+FWWsUdJ3cHGGmld7+AhvcWmQyGCYUh1hc4Q/pkOhb65dQR/pqCyK0cOaHz4Q==
 
 memoizerific@^1.11.3:
   version "1.11.3"
@@ -12836,8 +12836,8 @@ qs@6.7.0:
 
 qs@^6.10.0:
   version "6.10.1"
-  resolved "http://binary:80/artifactory/api/npm/npm/qs/-/qs-6.10.1.tgz#4931482fa8d647a5aab799c5271d2133b981fb6a"
-  integrity sha1-STFIL6jWR6Wqt5nFJx0hM7mB+2o=
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.10.1.tgz#4931482fa8d647a5aab799c5271d2133b981fb6a"
+  integrity sha512-M528Hph6wsSVOBiYUnGf+K/7w0hNshs/duGsNXPUCLH5XAqjEtiPGwNONLV0tBH8NoGb0mvD5JubnUTrujKDTg==
   dependencies:
     side-channel "^1.0.4"
 
@@ -12947,8 +12947,8 @@ react-color@^2.17.0:
 
 react-colorful@^5.1.2:
   version "5.5.0"
-  resolved "http://binary:80/artifactory/api/npm/npm/react-colorful/-/react-colorful-5.5.0.tgz#8359f218984a927095477a190ab9927eaf865c0c"
-  integrity sha1-g1nyGJhKknCVR3oZCrmSfq+GXAw=
+  resolved "https://registry.yarnpkg.com/react-colorful/-/react-colorful-5.5.0.tgz#8359f218984a927095477a190ab9927eaf865c0c"
+  integrity sha512-BuzrlrM0ylg7coPkXOrRqlf2BgHLw5L44sybbr9Lg4xy7w9e5N7fGYbojOO0s8J0nvrM3PERN2rVFkvSa24lnQ==
 
 react-dev-utils@^10.0.0:
   version "10.2.1"
@@ -13072,8 +13072,8 @@ react-hotkeys@2.0.0:
 
 react-input-autosize@^3.0.0:
   version "3.0.0"
-  resolved "http://binary:80/artifactory/api/npm/npm/react-input-autosize/-/react-input-autosize-3.0.0.tgz#6b5898c790d4478d69420b55441fcc31d5c50a85"
-  integrity sha1-a1iYx5DUR41pQgtVRB/MMdXFCoU=
+  resolved "https://registry.yarnpkg.com/react-input-autosize/-/react-input-autosize-3.0.0.tgz#6b5898c790d4478d69420b55441fcc31d5c50a85"
+  integrity sha512-nL9uS7jEs/zu8sqwFE5MAPx6pPkNAriACQ2rGLlqmKr2sPGtN7TXTyDdQt4lbNXVx7Uzadb40x8qotIuru6Rhg==
   dependencies:
     prop-types "^15.5.8"
 
@@ -13125,8 +13125,8 @@ react-refresh@^0.8.3:
 
 react-select@^3.2.0:
   version "3.2.0"
-  resolved "http://binary:80/artifactory/api/npm/npm/react-select/-/react-select-3.2.0.tgz#de9284700196f5f9b5277c5d850a9ce85f5c72fe"
-  integrity sha1-3pKEcAGW9fm1J3xdhQqc6F9ccv4=
+  resolved "https://registry.yarnpkg.com/react-select/-/react-select-3.2.0.tgz#de9284700196f5f9b5277c5d850a9ce85f5c72fe"
+  integrity sha512-B/q3TnCZXEKItO0fFN/I0tWOX3WJvi/X2wtdffmwSQVRwg5BpValScTO1vdic9AxlUgmeSzib2hAZAwIUQUZGQ==
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@emotion/cache" "^10.0.9"
@@ -13187,8 +13187,8 @@ react-textarea-autosize@^8.1.1:
 
 react-transition-group@^4.3.0:
   version "4.4.2"
-  resolved "http://binary:80/artifactory/api/npm/npm/react-transition-group/-/react-transition-group-4.4.2.tgz#8b59a56f09ced7b55cbd53c36768b922890d5470"
-  integrity sha1-i1mlbwnO17VcvVPDZ2i5IokNVHA=
+  resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.4.2.tgz#8b59a56f09ced7b55cbd53c36768b922890d5470"
+  integrity sha512-/RNYfRAMlZwDSr6z4zNKV6xu53/e2BuaBbGhbyYIXTrmgu/bGHzmqOs7mJSJBHy9Ud+ApHx3QjrkKSp1pxvlFg==
   dependencies:
     "@babel/runtime" "^7.5.5"
     dom-helpers "^5.0.1"
