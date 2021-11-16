@@ -1,27 +1,6 @@
 import { isValidEmail } from './util';
 
-describe('isValidEmail', () => {
-	it('should be valid', () => {
-         validSupported.forEach( email => {
-         	expect(isValidEmail(email)).toBeTruthy();
-         });
-	});
-
-	it('should be invalid', () => {
-         invalidSupported.forEach( email => {
-         	expect(isValidEmail(email)).toBeFalsy();
-         });
-	});
-
-	it('should be invalid(unsupported by util)', () => {
-         validUnsupported.forEach( email => {
-         	expect(isValidEmail(email)).toBeFalsy();
-         });
-	});
-});
-
-const validSupported =
-[
+const VALID_SUPPORTED = [
 	"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@letters-in-local.org",
 	"01234567890@numbers-in-local.net",
 	"&'*+-./=?^_{}~@other-valid-characters-in-local.net",
@@ -49,11 +28,9 @@ const validSupported =
 	"`aa@fr.com",
 	"com@sil.c1m",
 	"t119037jskc_ihndkdoz@aakctgajathzffcsuqyjhgjuxnuulgnhxtnbquwtgxljfayeestsjdbalthtddy.lgtmsdhywswlameglunsaplsblljavswxrltovagexhtttodqedmicsekvpmpuu.pgjvdmvzyltpixvalfbktnnpjyjqswbfvtpbfsngqtmhgamhrbqqvyvlhqigggv.nxqglspfbwdhtfpibcrccvctmoxuxwlunghhwacjtrclgirrgppvshxvrzkoifl",
-
 ];
 
-const validUnsupported =
-[
+const VALID_UNSUPPORTED = [
 	"\"quoted\"@sld.com",
 	"\"\\e\\s\\c\\a\\p\\e\\d\"@sld.com",
 	"\"quoted-at-sign@sld.org\"@sld.com",
@@ -63,8 +40,7 @@ const validUnsupported =
 	"bracketed-IP-instead-of-domain@[127.0.0.1]"
 ];
 
-const invalidSupported =
-[
+const INVALID_SUPPORTED = [
 	"@missing-local.org",
 	"! #$%`|@invalid-characters-in-local.org",
 	"(),:;`|@more-invalid-characters-in-local.org",
@@ -97,3 +73,23 @@ const invalidSupported =
 	"",
 	"tr119037jskc_ihndkdoz@d.aakctgajathzffcsuqyjhgjuxnuulgnhxtnbquwtgxljfayeestsjdbalthtddy.lgtmsdhywswlameglunsaplsblljavswxrltovagexhtttodqedmicsekvpmpuu.pgjvdmvzyltpixvalfbktnnpjyjqswbfvtpbfsngqtmhgamhrbqqvyvlhqigggv.nxqglspfbwdhtfpibcrccvctmoxuxwlunghhwacjtrclgirrgppvshxvrzkoifl",
 ];
+
+describe('isValidEmail', () => {
+    describe('should be valid', () => {
+        it.each(VALID_SUPPORTED)('%s',  email => 
+            expect(isValidEmail(email)).toBeTruthy()
+        );
+    });
+
+    describe('should be invalid', () => {
+        it.each(INVALID_SUPPORTED)('%s', email => 
+        expect(isValidEmail(email)).toBeFalsy()
+        );
+    });
+        
+    describe('should be invalid (unsupported)', () => {
+        it.each(VALID_UNSUPPORTED)('%s', email => 
+            expect(isValidEmail(email)).toBeFalsy()
+        );
+    });
+});
