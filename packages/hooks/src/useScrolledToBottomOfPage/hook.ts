@@ -1,5 +1,5 @@
 import React from 'react';
-import { hasScrolledToBottomOfPage } from '../../../utils/src/has-scrolled-to-bottom-of-page';
+import { hasScrolledToBottomOfPage } from '@alfalab/utils';
 
 export function useScrolledToBottomOfPage(
     cb: () => void, once = true
