@@ -70,4 +70,52 @@ describe('formatAmount', () => {
         expect(formatted).toBe('−123,45');
         expect(formattedWithCurrency).toBe('−123,45 ₽');
     });
+
+    it('should format correctly when passed null value', () => {
+        const {
+            majorPart, minorPart, formatted, formattedWithCurrency,
+        } = formatAmount({
+            view: 'default',
+            value: null as any,
+            currency: 'RUR',
+            minority: 100,
+        });
+
+        expect(majorPart).toBe('');
+        expect(minorPart).toBe('');
+        expect(formatted).toBe('');
+        expect(formattedWithCurrency).toBe('₽');
+    });
+
+    it('should format correctly when passed unknown currency', () => {
+        const {
+            majorPart, minorPart, formatted, formattedWithCurrency,
+        } = formatAmount({
+            view: 'default',
+            value: 12345,
+            currency: 'MONOPOLY_DOLLARS' as any,
+            minority: 100,
+        });
+
+        expect(majorPart).toBe('123');
+        expect(minorPart).toBe('45');
+        expect(formatted).toBe('123,45');
+        expect(formattedWithCurrency).toBe('123,45');
+    });
+
+    it('should format correctly when passed null value and unknown currency', () => {
+        const {
+            majorPart, minorPart, formatted, formattedWithCurrency,
+        } = formatAmount({
+            view: 'default',
+            value: null as any,
+            currency: 'MONOPOLY_DOLLARS' as any,
+            minority: 100,
+        });
+
+        expect(majorPart).toBe('');
+        expect(minorPart).toBe('');
+        expect(formatted).toBe('');
+        expect(formattedWithCurrency).toBe('');
+    });
 });

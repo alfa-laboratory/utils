@@ -32,20 +32,23 @@ type AmountType = {
     view?: 'default' | 'withZeroMinorPart';
 };
 
+const formatWithCurrency = (value: string | null, currencySymbol?: string) =>
+    [value, currencySymbol].filter(Boolean).join(THINSP);
+
 /**
  * Форматирует значение суммы
  * согласно гайдлайну https://design.alfabank.ru/patterns/amount
  */
-export const formatAmount = ({
-    value, currency, minority, view,
-}: AmountType) => {
+export const formatAmount = ({ value, currency, minority, view }: AmountType) => {
+    const currencySymbol = getCurrencySymbol(currency);
+
     if (value === null) {
         return {
             majorPart: '',
             minorPart: '',
             formatted: '',
-            currencySymbol: getCurrencySymbol(currency),
-            formattedWithCurrency: THINSP + getCurrencySymbol(currency),
+            currencySymbol,
+            formattedWithCurrency: formatWithCurrency(value, currencySymbol),
         };
     }
 
@@ -79,8 +82,8 @@ export const formatAmount = ({
     return {
         majorPart: majorPartFormatted,
         minorPart,
-        currencySymbol: getCurrencySymbol(currency),
+        currencySymbol,
         formatted: formattedValueStr,
-        formattedWithCurrency: formattedValueStr + THINSP + getCurrencySymbol(currency),
+        formattedWithCurrency: formatWithCurrency(formattedValueStr, currencySymbol),
     };
 };
