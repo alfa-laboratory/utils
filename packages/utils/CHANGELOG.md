@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.1](https://github.com/alfa-laboratory/utils/compare/@alfalab/utils@1.5.0...@alfalab/utils@1.5.1) (2021-11-25)
+
+
+### Bug Fixes
+
+* **utils:** fix formatAmount unknown currency ([#74](https://github.com/alfa-laboratory/utils/issues/74)) ([f053f21](https://github.com/alfa-laboratory/utils/commit/f053f21d76c0c62f8164ce7b5c59630bdd8b15e3))
+
+
+
+
+
 # [1.5.0](https://github.com/alfa-laboratory/utils/compare/@alfalab/utils@1.4.5...@alfalab/utils@1.5.0) (2021-10-04)
 
 

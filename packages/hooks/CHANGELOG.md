@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.1](https://github.com/alfa-laboratory/utils/compare/@alfalab/hooks@1.4.0...@alfalab/hooks@1.4.1) (2021-11-25)
+
+
+### Bug Fixes
+
+* **hooks:** correct utils import in useScrolledToBottomOfPage ([#73](https://github.com/alfa-laboratory/utils/issues/73)) ([df1c9b9](https://github.com/alfa-laboratory/utils/commit/df1c9b9f100547bddb08ecb769a3e53f8e567d4c))
+
+
+
+
+
 # [1.4.0](https://github.com/alfa-laboratory/utils/compare/@alfalab/hooks@1.3.5...@alfalab/hooks@1.4.0) (2021-10-04)
 
 

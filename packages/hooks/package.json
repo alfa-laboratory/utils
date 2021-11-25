@@ -1,6 +1,6 @@
 {
     "name": "@alfalab/hooks",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "description": "common hooks",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
