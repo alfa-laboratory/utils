@@ -10,5 +10,11 @@ export default {
         file: 'dist/index.js',
         format: 'cjs',
     },
-    plugins: [ts(), uglify(), nodeResolve(), commonjs(), autoExternal()],
+    plugins: [
+        ts({ include: ['../**/*.{ts,tsx}'] }),
+        uglify(),
+        nodeResolve(),
+        commonjs(),
+        autoExternal(),
+    ],
 };

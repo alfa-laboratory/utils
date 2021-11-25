@@ -8,5 +8,5 @@ export default {
         file: 'dist/index.js',
         format: 'cjs',
     },
-    plugins: [ts(), uglify(), autoExternal()],
+    plugins: [ts({ include: ['../**/*.{ts,tsx}'] }), uglify(), autoExternal()],
 };
