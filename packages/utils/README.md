@@ -77,3 +77,7 @@ import { cropAccountNumber } from '@alfalab/utils';
 ### [split-amount](https://github.com/alfa-laboratory/utils/blob/master/packages/utils/src/split-amount/util.ts)
 
 - `splitAmount` — Дробит мажорную часть суммы на части по указанному символу.<br />`splitAmount('10000000', 3, ' ') - '10 000 000'`
+
+### [is-valid-email](https://github.com/alfa-laboratory/utils/blob/master/packages/utils/src/is-valid-email/util.ts)
+
+- `isValidEmail` — Возвращает `true` для валидного email, иначе `false` <br />`isValidEmail('alfa@labaratory.com') - true`
