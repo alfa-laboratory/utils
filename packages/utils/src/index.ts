@@ -11,4 +11,6 @@ export * from './pluralize';
 export * from './seconds-to-time';
 export * from './split-amount';
 export * from './is-valid-card-number';
+export * from './is-valid-email';
 export * from './has-scrolled-to-bottom-of-page';
+ 
