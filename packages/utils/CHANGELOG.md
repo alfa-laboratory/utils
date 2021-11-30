@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/alfa-laboratory/utils/compare/@alfalab/utils@1.5.1...@alfalab/utils@1.6.0) (2021-11-30)
+
+
+### Features
+
+* **is-valid-email:** add email validation util ([#67](https://github.com/alfa-laboratory/utils/issues/67)) ([f36cc59](https://github.com/alfa-laboratory/utils/commit/f36cc5909cbe95f2d76d233362f52cdfaba79518))
+
+
+
+
+
 ## [1.5.1](https://github.com/alfa-laboratory/utils/compare/@alfalab/utils@1.5.0...@alfalab/utils@1.5.1) (2021-11-25)
 
 
