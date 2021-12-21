@@ -1,5 +1,4 @@
 import ts from '@rollup/plugin-typescript';
-import { terser as uglify } from 'rollup-plugin-terser';
 import autoExternal from 'rollup-plugin-auto-external';
 
 export default {
@@ -14,5 +13,5 @@ export default {
             format: 'esm',
         },
     ],
-    plugins: [ts({ include: ['../**/*.{ts,tsx}'] }), uglify(), autoExternal()],
+    plugins: [ts({ include: ['../**/*.{ts,tsx}'] }), autoExternal()],
 };
