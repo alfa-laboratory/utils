@@ -2,8 +2,10 @@
     "name": "@alfalab/toolbox",
     "version": "1.0.3",
     "description": "",
+    "sideEffects": false,
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
+    "module": "./dist/esm/index.js",
     "files": [
         "dist"
     ],
