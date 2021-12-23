@@ -1,4 +1,4 @@
-import { countries, CountryRaw } from '@alfalab/data';
+import { countries, CountryRaw } from '@alfalab/data/countries';
 
 export type Country = {
     name: string;

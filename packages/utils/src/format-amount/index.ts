@@ -1,4 +1,4 @@
-import { CurrencyCodes } from '@alfalab/data';
+import { CurrencyCodes } from '@alfalab/data/currency';
 import { getCurrencySymbol } from '../get-currency-symbol';
 import { splitAmount } from '../split-amount';
 
