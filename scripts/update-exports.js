@@ -40,19 +40,19 @@ const newDts = {
 };
 
 console.log('Update package.exports...');
-fs.writeFileSync('./package.json', JSON.stringify(newPkg, null, 4));
+fs.writeFileSync('./package.json', JSON.stringify(newPkg, null, 4) + '\n');
 
 console.log('Update dts.json...');
-fs.writeFileSync('./dts.json', JSON.stringify(newDts, null, 2));
+fs.writeFileSync('./dts.json', JSON.stringify(newDts, null, 4) + '\n');
 
 console.log('Creating file exports...');
 for (let file of dist) {
     fs.writeFileSync(`./${file}.js`, `module.exports = require('./dist/${file}/index.js');\n`);
-    fs.writeFileSync(`./${file}.mjs`, `export * from './dist/${file}/index.mjs';`);
-    fs.writeFileSync(`./${file}.d.ts`, `export * from './dist/${file}';`)
+    fs.writeFileSync(`./${file}.mjs`, `export * from './dist/${file}/index.mjs';\n`);
+    fs.writeFileSync(`./${file}.d.ts`, `export * from './dist/${file}';\n`)
 }
 
 console.log('Updating gitignore rules...');
-fs.writeFileSync('./.gitignore', dist.map((name) => `${name}.js\n${name}.mjs\n${name}.d.ts`).join('\n'));
+fs.writeFileSync('./.gitignore', dist.map((name) => `${name}.js\n${name}.mjs\n${name}.d.ts`).join('\n') + '\n');
 
 console.log('Done.');
