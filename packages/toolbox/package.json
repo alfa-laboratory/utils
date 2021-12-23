@@ -1,6 +1,6 @@
 {
     "name": "@alfalab/toolbox",
-    "version": "1.0.3",
+    "version": "1.1.0",
     "description": "",
     "sideEffects": false,
     "main": "dist/index.js",
@@ -18,9 +18,9 @@
     "author": "Evgeniy Troynov",
     "license": "MIT",
     "dependencies": {
-        "@alfalab/data": "^1.0.1",
-        "@alfalab/hooks": "^1.4.1",
-        "@alfalab/utils": "^1.6.0"
+        "@alfalab/data": "^1.1.0",
+        "@alfalab/hooks": "^1.5.0",
+        "@alfalab/utils": "^1.7.0"
     },
     "devDependencies": {
         "dts-bundle-generator": "^5.4.0"

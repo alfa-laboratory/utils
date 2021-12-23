@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/alfa-laboratory/utils/compare/@alfalab/toolbox@1.0.3...@alfalab/toolbox@1.1.0) (2021-12-23)
+
+
+### Features
+
+* add esm build ([#75](https://github.com/alfa-laboratory/utils/issues/75)) ([e48cc48](https://github.com/alfa-laboratory/utils/commit/e48cc487b5db1815cdaf10ad6639d42741f0d772))
+
+
+
+
+
 ## [1.0.3](https://github.com/alfa-laboratory/utils/compare/@alfalab/toolbox@1.0.2...@alfalab/toolbox@1.0.3) (2021-11-30)
 
 **Note:** Version bump only for package @alfalab/toolbox
