@@ -46,6 +46,6 @@ describe('isOverflown', () => {
     });
 
     it('should throw an error if called without an arg', () => {
-        expect(isOverflown).toThrow("Cannot read property 'scrollHeight' of undefined");
+        expect(isOverflown).toThrowError();
     });
 });
