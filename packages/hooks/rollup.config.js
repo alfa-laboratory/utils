@@ -7,12 +7,15 @@ export default {
     input: 'src/index.ts',
     output: [
         {
-            file: 'dist/index.js',
+            dir: 'dist',
             format: 'cjs',
+            preserveModules: true,
         },
         {
-            file: 'dist/esm/index.js',
+            dir: 'dist',
             format: 'esm',
+            entryFileNames: '[name].mjs',
+            preserveModules: true,
         },
     ],
     plugins: [
