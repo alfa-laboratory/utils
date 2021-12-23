@@ -3,25 +3,21 @@ const fs = require('fs');
 const dts = JSON.parse(fs.readFileSync('./dts.json', 'utf-8'));
 const dist = fs.readdirSync('./dist/').filter((name) => !name.includes('index'));
 
-const dtsEntries = dist.map((name) => ({
-    filePath: `./src/${name}/index.ts`,
-    outFile: `./dist/${name}/index.d.ts`,
-}));
-
 const newDts = {
     ...dts,
-    entries: [
-        {
-            filePath: './src/index.ts',
-            outFile: './dist/index.d.ts',
-        },
-        ...dtsEntries
-    ],
+    entries: dist.map((name) => ({
+        filePath: `./src/${name}/index.ts`,
+        outFile: `./dist/${name}/index.d.ts`,
+    }))
 };
 
 console.log('Update dts.json...');
 fs.writeFileSync('./dts.json', JSON.stringify(newDts, null, 4) + '\n');
 
+console.log('Copy index.ts to index.d.ts')
+if (fs.existsSync('./src/index.ts')) {
+    fs.copyFileSync('./src/index.ts', './dist/index.d.ts');
+}
 console.log('Creating file exports...');
 for (let file of dist) {
     fs.writeFileSync(`./${file}.js`, `module.exports = require('./dist/${file}/index.js');\n`);

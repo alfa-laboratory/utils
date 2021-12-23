@@ -4,10 +4,6 @@
     },
     "entries": [
         {
-            "filePath": "./src/index.ts",
-            "outFile": "./dist/index.d.ts"
-        },
-        {
             "filePath": "./src/useClickOutside/index.ts",
             "outFile": "./dist/useClickOutside/index.d.ts"
         },

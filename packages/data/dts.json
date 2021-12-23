@@ -4,10 +4,6 @@
     },
     "entries": [
         {
-            "filePath": "./src/index.ts",
-            "outFile": "./dist/index.d.ts"
-        },
-        {
             "filePath": "./src/countries/index.ts",
             "outFile": "./dist/countries/index.d.ts"
         },

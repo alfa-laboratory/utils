@@ -9,7 +9,7 @@ export default {
             format: 'cjs',
         },
         {
-            file: 'dist/esm/index.mjs',
+            file: 'dist/index.mjs',
             format: 'esm',
         },
     ],

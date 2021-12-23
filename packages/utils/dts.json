@@ -4,10 +4,6 @@
     },
     "entries": [
         {
-            "filePath": "./src/index.ts",
-            "outFile": "./dist/index.d.ts"
-        },
-        {
             "filePath": "./src/crop-account-number/index.ts",
             "outFile": "./dist/crop-account-number/index.d.ts"
         },
