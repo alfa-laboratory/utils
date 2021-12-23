@@ -1,8 +1,71 @@
 {
+  "compilationOptions": {
+    "preferredConfigPath": "./tsconfig.json"
+  },
   "entries": [
     {
       "filePath": "./src/index.ts",
       "outFile": "./dist/index.d.ts"
+    },
+    {
+      "filePath": "./src/crop-account-number/index.ts",
+      "outFile": "./dist/crop-account-number/index.d.ts"
+    },
+    {
+      "filePath": "./src/format-account/index.ts",
+      "outFile": "./dist/format-account/index.d.ts"
+    },
+    {
+      "filePath": "./src/format-amount/index.ts",
+      "outFile": "./dist/format-amount/index.d.ts"
+    },
+    {
+      "filePath": "./src/format-file-size/index.ts",
+      "outFile": "./dist/format-file-size/index.d.ts"
+    },
+    {
+      "filePath": "./src/format-phone/index.ts",
+      "outFile": "./dist/format-phone/index.d.ts"
+    },
+    {
+      "filePath": "./src/get-all-currency-codes/index.ts",
+      "outFile": "./dist/get-all-currency-codes/index.d.ts"
+    },
+    {
+      "filePath": "./src/get-countries/index.ts",
+      "outFile": "./dist/get-countries/index.d.ts"
+    },
+    {
+      "filePath": "./src/get-currency-symbol/index.ts",
+      "outFile": "./dist/get-currency-symbol/index.d.ts"
+    },
+    {
+      "filePath": "./src/has-scrolled-to-bottom-of-page/index.ts",
+      "outFile": "./dist/has-scrolled-to-bottom-of-page/index.d.ts"
+    },
+    {
+      "filePath": "./src/is-overflown/index.ts",
+      "outFile": "./dist/is-overflown/index.d.ts"
+    },
+    {
+      "filePath": "./src/is-valid-card-number/index.ts",
+      "outFile": "./dist/is-valid-card-number/index.d.ts"
+    },
+    {
+      "filePath": "./src/is-valid-email/index.ts",
+      "outFile": "./dist/is-valid-email/index.d.ts"
+    },
+    {
+      "filePath": "./src/pluralize/index.ts",
+      "outFile": "./dist/pluralize/index.d.ts"
+    },
+    {
+      "filePath": "./src/seconds-to-time/index.ts",
+      "outFile": "./dist/seconds-to-time/index.d.ts"
+    },
+    {
+      "filePath": "./src/split-amount/index.ts",
+      "outFile": "./dist/split-amount/index.d.ts"
     }
   ]
 }

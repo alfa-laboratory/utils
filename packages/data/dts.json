@@ -1,8 +1,23 @@
 {
+  "compilationOptions": {
+    "preferredConfigPath": "./tsconfig.json"
+  },
   "entries": [
     {
       "filePath": "./src/index.ts",
       "outFile": "./dist/index.d.ts"
+    },
+    {
+      "filePath": "./src/countries/index.ts",
+      "outFile": "./dist/countries/index.d.ts"
+    },
+    {
+      "filePath": "./src/currency/index.ts",
+      "outFile": "./dist/currency/index.d.ts"
+    },
+    {
+      "filePath": "./src/keyboard-codes/index.ts",
+      "outFile": "./dist/keyboard-codes/index.d.ts"
     }
   ]
 }
