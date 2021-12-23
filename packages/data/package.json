@@ -5,7 +5,7 @@
     "sideEffects": false,
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
-    "module": "dist/esm/index.js",
+    "module": "dist/index.js",
     "files": [
         "dist",
         "*.js",
@@ -14,8 +14,9 @@
         "!rollup.config.js"
     ],
     "scripts": {
-        "update:exports": "node ../../scripts/update-exports.js",
-        "build": "yarn build:ts && yarn update:exports && yarn build:dts ",
+        "remove-junk": "node ../../scripts/remove-junk",
+        "update-exports": "node ../../scripts/update-exports.js",
+        "build": "yarn remove-junk && yarn build:ts && yarn update-exports && yarn build:dts",
         "build:ts": "rollup -c",
         "build:dts": "dts-bundle-generator --no-banner --config dts.json"
     },
@@ -28,24 +29,5 @@
     "publishConfig": {
         "access": "public"
     },
-    "gitHead": "10dd0711fab88c3173da9cd72abe50194559d021",
-    "exports": {
-        ".": {
-            "import": "./dist/index.mjs",
-            "require": "./dist/index.js"
-        },
-        "./package.json": "./package.json",
-        "./countries": {
-            "import": "./dist/countries/index.mjs",
-            "require": "./dist/countries/index.js"
-        },
-        "./currency": {
-            "import": "./dist/currency/index.mjs",
-            "require": "./dist/currency/index.js"
-        },
-        "./keyboard-codes": {
-            "import": "./dist/keyboard-codes/index.mjs",
-            "require": "./dist/keyboard-codes/index.js"
-        }
-    }
+    "gitHead": "10dd0711fab88c3173da9cd72abe50194559d021"
 }
