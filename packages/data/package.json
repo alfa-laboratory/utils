@@ -10,7 +10,8 @@
         "dist"
     ],
     "scripts": {
-        "build": "yarn build:ts && yarn build:dts",
+        "update:exports": "node ../../scripts/update-exports.js",
+        "build": "yarn build:ts && yarn build:dts && yarn update:exports",
         "build:ts": "rollup -c",
         "build:dts": "dts-bundle-generator --no-banner --config dts.json"
     },
@@ -23,5 +24,24 @@
     "publishConfig": {
         "access": "public"
     },
-    "gitHead": "10dd0711fab88c3173da9cd72abe50194559d021"
+    "gitHead": "10dd0711fab88c3173da9cd72abe50194559d021",
+    "exports": {
+        ".": {
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.js"
+        },
+        "./package.json": "./package.json",
+        "./countries": {
+            "import": "./dist/countries/index.mjs",
+            "require": "./dist/countries/index.js"
+        },
+        "./currency": {
+            "import": "./dist/currency/index.mjs",
+            "require": "./dist/currency/index.js"
+        },
+        "./keyboard-codes": {
+            "import": "./dist/keyboard-codes/index.mjs",
+            "require": "./dist/keyboard-codes/index.js"
+        }
+    }
 }
