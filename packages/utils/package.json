@@ -10,7 +10,8 @@
         "dist"
     ],
     "scripts": {
-        "build": "yarn build:ts && yarn build:dts",
+        "update:exports": "node ../../scripts/update-exports.js",
+        "build": "yarn build:ts && yarn build:dts && yarn update:exports",
         "build:ts": "rollup -c",
         "build:dts": "dts-bundle-generator --no-banner --config dts.json"
     },
@@ -27,5 +28,72 @@
     "publishConfig": {
         "access": "public"
     },
-    "gitHead": "10dd0711fab88c3173da9cd72abe50194559d021"
+    "gitHead": "10dd0711fab88c3173da9cd72abe50194559d021",
+    "exports": {
+        ".": {
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.js"
+        },
+        "./package.json": "./package.json",
+        "./crop-account-number": {
+            "import": "./dist/crop-account-number/index.mjs",
+            "require": "./dist/crop-account-number/index.js"
+        },
+        "./format-account": {
+            "import": "./dist/format-account/index.mjs",
+            "require": "./dist/format-account/index.js"
+        },
+        "./format-amount": {
+            "import": "./dist/format-amount/index.mjs",
+            "require": "./dist/format-amount/index.js"
+        },
+        "./format-file-size": {
+            "import": "./dist/format-file-size/index.mjs",
+            "require": "./dist/format-file-size/index.js"
+        },
+        "./format-phone": {
+            "import": "./dist/format-phone/index.mjs",
+            "require": "./dist/format-phone/index.js"
+        },
+        "./get-all-currency-codes": {
+            "import": "./dist/get-all-currency-codes/index.mjs",
+            "require": "./dist/get-all-currency-codes/index.js"
+        },
+        "./get-countries": {
+            "import": "./dist/get-countries/index.mjs",
+            "require": "./dist/get-countries/index.js"
+        },
+        "./get-currency-symbol": {
+            "import": "./dist/get-currency-symbol/index.mjs",
+            "require": "./dist/get-currency-symbol/index.js"
+        },
+        "./has-scrolled-to-bottom-of-page": {
+            "import": "./dist/has-scrolled-to-bottom-of-page/index.mjs",
+            "require": "./dist/has-scrolled-to-bottom-of-page/index.js"
+        },
+        "./is-overflown": {
+            "import": "./dist/is-overflown/index.mjs",
+            "require": "./dist/is-overflown/index.js"
+        },
+        "./is-valid-card-number": {
+            "import": "./dist/is-valid-card-number/index.mjs",
+            "require": "./dist/is-valid-card-number/index.js"
+        },
+        "./is-valid-email": {
+            "import": "./dist/is-valid-email/index.mjs",
+            "require": "./dist/is-valid-email/index.js"
+        },
+        "./pluralize": {
+            "import": "./dist/pluralize/index.mjs",
+            "require": "./dist/pluralize/index.js"
+        },
+        "./seconds-to-time": {
+            "import": "./dist/seconds-to-time/index.mjs",
+            "require": "./dist/seconds-to-time/index.js"
+        },
+        "./split-amount": {
+            "import": "./dist/split-amount/index.mjs",
+            "require": "./dist/split-amount/index.js"
+        }
+    }
 }

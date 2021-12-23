@@ -1,4 +1,4 @@
-import { splitAmount } from './util';
+import { splitAmount } from '.';
 
 test('splitAmount', () => {
     expect(splitAmount('100', 3, ' ')).toBe('100');

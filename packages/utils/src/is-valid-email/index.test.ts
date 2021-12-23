@@ -1,4 +1,4 @@
-import { isValidEmail } from './util';
+import { isValidEmail } from '.';
 
 const VALID_SUPPORTED = [
 	"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@letters-in-local.org",

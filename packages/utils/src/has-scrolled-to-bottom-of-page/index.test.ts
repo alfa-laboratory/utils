@@ -1,4 +1,4 @@
-import { hasScrolledToBottomOfPage } from './util';
+import { hasScrolledToBottomOfPage } from '.';
 
 describe('has scrolled to bottom of page', () => {
     it('should return true when it scrolled to bottom of page', () => {

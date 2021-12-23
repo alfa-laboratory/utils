@@ -1,4 +1,4 @@
-import { isOverflown } from './';
+import { isOverflown } from '.';
 
 describe('isOverflown', () => {
     it('should return `true` if element content height overflowing', () => {
