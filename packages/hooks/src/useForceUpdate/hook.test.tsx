@@ -64,7 +64,7 @@ describe('useForceUpdate', () => {
         act(() => {
             forceUpdates[1]();
         });
-        
+
         expect(renders).toEqual(3);
     });
 });
