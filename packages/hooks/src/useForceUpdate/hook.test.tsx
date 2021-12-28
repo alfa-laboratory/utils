@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { render, act } from '@testing-library/react';
 
-import {useForceUpdate} from './hook';
+import { useForceUpdate } from './hook';
 
 describe('useForceUpdate', () => {
     const forceUpdates: Array<() => void> = [];
