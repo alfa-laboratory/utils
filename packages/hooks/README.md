@@ -80,3 +80,7 @@ function Counter() {
     );
 }
 ```
+
+### [useForceUpdate](https://github.com/alfa-laboratory/utils/blob/master/packages/hooks/src/useForceUpdate/hook.ts)
+
+Возвращает коллбек для принудительного ререндера компонента
