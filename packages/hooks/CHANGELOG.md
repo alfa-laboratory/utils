@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/alfa-laboratory/utils/compare/@alfalab/hooks@1.5.0...@alfalab/hooks@1.6.0) (2021-12-29)
+
+
+### Features
+
+* **use-force-update:** add hook ([#77](https://github.com/alfa-laboratory/utils/issues/77)) ([17d9798](https://github.com/alfa-laboratory/utils/commit/17d97983f2712ea2748ec3102ca6fcbd61a03f5e))
+
+
+
+
+
 # [1.5.0](https://github.com/alfa-laboratory/utils/compare/@alfalab/hooks@1.4.1...@alfalab/hooks@1.5.0) (2021-12-23)
 
 
