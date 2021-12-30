@@ -9,3 +9,4 @@ export * from './usePrevious';
 export * from './useDidUpdateEffect';
 export * from './useImageLoadingState';
 export * from './useScrolledToBottomOfPage';
+export * from './useForceUpdate';
