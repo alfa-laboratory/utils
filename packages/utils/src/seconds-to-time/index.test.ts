@@ -1,4 +1,4 @@
-import { secondsToTime } from './util';
+import { secondsToTime } from '.';
 
 describe('seconds to time', () => {
     it('should return object with zero-padded hours, minutes and seconds', () => {

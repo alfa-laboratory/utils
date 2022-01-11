@@ -5,14 +5,14 @@
     "sideEffects": false,
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
-    "module": "dist/esm/index.js",
+    "module": "dist/index.mjs",
     "files": [
         "dist"
     ],
     "scripts": {
         "build": "yarn build:ts && yarn build:dts",
         "build:ts": "rollup -c",
-        "build:dts": "dts-bundle-generator --no-banner --no-check --config dts.json"
+        "build:dts": "cp ./src/index.ts ./dist/index.d.ts"
     },
     "keywords": [],
     "author": "Evgeniy Troynov",

@@ -1,4 +1,4 @@
-import { formatFileSize } from './util';
+import { formatFileSize } from '.';
 
 describe('formatFileSize', () => {
     const cases = [

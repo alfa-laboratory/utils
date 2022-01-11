@@ -1,4 +1,4 @@
-import { formatAmount } from './util';
+import { formatAmount } from '.';
 
 describe('formatAmount', () => {
     it('should return not empty minorPart if passed view = "default" and value has zero minor part', () => {

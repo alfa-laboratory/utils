@@ -1,4 +1,4 @@
-import { formatAccount } from './util';
+import { formatAccount } from '.';
 
 describe('formatAccount', () => {
     it('should return formatted account value', () => {

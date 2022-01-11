@@ -20,5 +20,8 @@ jobs:
             - name: Setup lerna
               run: yarn setup
 
+            - name: Build packages
+              run: yarn workspaces run build
+
             - name: run tests
               run: yarn test

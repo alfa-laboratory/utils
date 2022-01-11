@@ -5,12 +5,18 @@
     "sideEffects": false,
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
-    "module": "dist/esm/index.js",
+    "module": "dist/index.mjs",
     "files": [
-        "dist"
+        "dist",
+        "*.js",
+        "*.mjs",
+        "*.d.ts",
+        "!rollup.config.js"
     ],
     "scripts": {
-        "build": "yarn build:ts && yarn build:dts",
+        "remove-junk": "node ../../scripts/remove-junk",
+        "update-exports": "node ../../scripts/update-exports.js",
+        "build": "yarn remove-junk && yarn build:ts && yarn update-exports && yarn build:dts",
         "build:ts": "rollup -c",
         "build:dts": "dts-bundle-generator --no-banner --no-check --config dts.json"
     },
@@ -34,5 +40,52 @@
     "publishConfig": {
         "access": "public"
     },
-    "gitHead": "10dd0711fab88c3173da9cd72abe50194559d021"
+    "gitHead": "10dd0711fab88c3173da9cd72abe50194559d021",
+    "exports": {
+        ".": {
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.js"
+        },
+        "./package.json": "./package.json",
+        "./useClickOutside": {
+            "import": "./dist/useClickOutside/index.mjs",
+            "require": "./dist/useClickOutside/index.js"
+        },
+        "./useCountdown": {
+            "import": "./dist/useCountdown/index.mjs",
+            "require": "./dist/useCountdown/index.js"
+        },
+        "./useDidUpdateEffect": {
+            "import": "./dist/useDidUpdateEffect/index.mjs",
+            "require": "./dist/useDidUpdateEffect/index.js"
+        },
+        "./useEventCallback": {
+            "import": "./dist/useEventCallback/index.mjs",
+            "require": "./dist/useEventCallback/index.js"
+        },
+        "./useFocus": {
+            "import": "./dist/useFocus/index.mjs",
+            "require": "./dist/useFocus/index.js"
+        },
+        "./useImageLoadingState": {
+            "import": "./dist/useImageLoadingState/index.mjs",
+            "require": "./dist/useImageLoadingState/index.js"
+        },
+        "./useKeydownOutside": {
+            "import": "./dist/useKeydownOutside/index.mjs",
+            "require": "./dist/useKeydownOutside/index.js"
+        },
+        "./useMedia": {
+            "import": "./dist/useMedia/index.mjs",
+            "require": "./dist/useMedia/index.js"
+        },
+        "./usePrevious": {
+            "import": "./dist/usePrevious/index.mjs",
+            "require": "./dist/usePrevious/index.js"
+        },
+        "./useScrolledToBottomOfPage": {
+            "import": "./dist/useScrolledToBottomOfPage/index.mjs",
+            "require": "./dist/useScrolledToBottomOfPage/index.js"
+        }
+    }
 }

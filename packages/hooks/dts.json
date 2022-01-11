@@ -1,8 +1,47 @@
 {
-  "entries": [
-    {
-      "filePath": "./src/index.ts",
-      "outFile": "./dist/index.d.ts"
-    }
-  ]
+    "compilationOptions": {
+        "preferredConfigPath": "./tsconfig.json"
+    },
+    "entries": [
+        {
+            "filePath": "./src/useClickOutside/index.ts",
+            "outFile": "./dist/useClickOutside/index.d.ts"
+        },
+        {
+            "filePath": "./src/useCountdown/index.ts",
+            "outFile": "./dist/useCountdown/index.d.ts"
+        },
+        {
+            "filePath": "./src/useDidUpdateEffect/index.ts",
+            "outFile": "./dist/useDidUpdateEffect/index.d.ts"
+        },
+        {
+            "filePath": "./src/useEventCallback/index.ts",
+            "outFile": "./dist/useEventCallback/index.d.ts"
+        },
+        {
+            "filePath": "./src/useFocus/index.ts",
+            "outFile": "./dist/useFocus/index.d.ts"
+        },
+        {
+            "filePath": "./src/useImageLoadingState/index.ts",
+            "outFile": "./dist/useImageLoadingState/index.d.ts"
+        },
+        {
+            "filePath": "./src/useKeydownOutside/index.ts",
+            "outFile": "./dist/useKeydownOutside/index.d.ts"
+        },
+        {
+            "filePath": "./src/useMedia/index.ts",
+            "outFile": "./dist/useMedia/index.d.ts"
+        },
+        {
+            "filePath": "./src/usePrevious/index.ts",
+            "outFile": "./dist/usePrevious/index.d.ts"
+        },
+        {
+            "filePath": "./src/useScrolledToBottomOfPage/index.ts",
+            "outFile": "./dist/useScrolledToBottomOfPage/index.d.ts"
+        }
+    ]
 }

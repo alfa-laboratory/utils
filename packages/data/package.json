@@ -5,12 +5,18 @@
     "sideEffects": false,
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
-    "module": "dist/esm/index.js",
+    "module": "dist/index.js",
     "files": [
-        "dist"
+        "dist",
+        "*.js",
+        "*.mjs",
+        "*.d.ts",
+        "!rollup.config.js"
     ],
     "scripts": {
-        "build": "yarn build:ts && yarn build:dts",
+        "remove-junk": "node ../../scripts/remove-junk",
+        "update-exports": "node ../../scripts/update-exports.js",
+        "build": "yarn remove-junk && yarn build:ts && yarn update-exports && yarn build:dts",
         "build:ts": "rollup -c",
         "build:dts": "dts-bundle-generator --no-banner --config dts.json"
     },

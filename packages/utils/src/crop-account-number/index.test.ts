@@ -1,4 +1,4 @@
-import { cropAccountNumber } from './util';
+import { cropAccountNumber } from '.';
 
 describe('cropAccountNumber', () => {
     it('should return cropped account number', () => {
