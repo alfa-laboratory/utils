@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.1](https://github.com/alfa-laboratory/utils/compare/@alfalab/hooks@1.6.0...@alfalab/hooks@1.6.1) (2022-01-11)
+
+
+### Bug Fixes
+
+* **use-force-update:** add missing export ([#78](https://github.com/alfa-laboratory/utils/issues/78)) ([ce9fd98](https://github.com/alfa-laboratory/utils/commit/ce9fd982b3f442a07c402a33bb81f592c2acd34e))
+
+
+
+
+
 # [1.6.0](https://github.com/alfa-laboratory/utils/compare/@alfalab/hooks@1.5.0...@alfalab/hooks@1.6.0) (2021-12-29)
 
 

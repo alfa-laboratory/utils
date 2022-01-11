@@ -1,6 +1,6 @@
 {
     "name": "@alfalab/toolbox",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "description": "",
     "sideEffects": false,
     "main": "dist/index.js",
@@ -19,7 +19,7 @@
     "license": "MIT",
     "dependencies": {
         "@alfalab/data": "^1.1.0",
-        "@alfalab/hooks": "^1.6.0",
+        "@alfalab/hooks": "^1.6.1",
         "@alfalab/utils": "^1.7.0"
     },
     "devDependencies": {
