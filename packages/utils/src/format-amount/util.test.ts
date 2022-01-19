@@ -103,6 +103,21 @@ describe('formatAmount', () => {
         expect(formattedWithCurrency).toBe('123,45');
     });
 
+    it('should format correctly when currency is not passed', () => {
+        const {
+            majorPart, minorPart, formatted, formattedWithCurrency,
+        } = formatAmount({
+            view: 'default',
+            value: 12345,
+            minority: 100,
+        });
+
+        expect(majorPart).toBe('123');
+        expect(minorPart).toBe('45');
+        expect(formatted).toBe('123,45');
+        expect(formattedWithCurrency).toBe('123,45');
+    });
+
     it('should format correctly when passed null value and unknown currency', () => {
         const {
             majorPart, minorPart, formatted, formattedWithCurrency,
