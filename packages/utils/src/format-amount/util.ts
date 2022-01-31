@@ -18,7 +18,7 @@ type AmountType = {
     /**
      * Валюта
      */
-    currency: CurrencyCodes;
+    currency?: CurrencyCodes;
 
     /**
      * Количество минорных единиц в валюте
@@ -40,7 +40,7 @@ const formatWithCurrency = (value: string | null, currencySymbol?: string) =>
  * согласно гайдлайну https://design.alfabank.ru/patterns/amount
  */
 export const formatAmount = ({ value, currency, minority, view }: AmountType) => {
-    const currencySymbol = getCurrencySymbol(currency);
+    const currencySymbol = currency ? getCurrencySymbol(currency) : '';
 
     if (value === null) {
         return {
