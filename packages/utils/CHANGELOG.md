@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/alfa-laboratory/utils/compare/@alfalab/utils@1.7.0...@alfalab/utils@1.8.0) (2022-01-31)
+
+
+### Features
+
+* **utils:** allow to use formatAmount without currency ([#82](https://github.com/alfa-laboratory/utils/issues/82)) ([ad67f1c](https://github.com/alfa-laboratory/utils/commit/ad67f1cc29866f41ca3b4a035b44b2bdfeb9f52c))
+
+
+
+
+
 # [1.7.0](https://github.com/alfa-laboratory/utils/compare/@alfalab/utils@1.6.0...@alfalab/utils@1.7.0) (2021-12-23)
 
 

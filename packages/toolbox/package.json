@@ -1,6 +1,6 @@
 {
     "name": "@alfalab/toolbox",
-    "version": "1.1.2",
+    "version": "1.1.3",
     "description": "",
     "sideEffects": false,
     "main": "dist/index.js",
@@ -20,7 +20,7 @@
     "dependencies": {
         "@alfalab/data": "^1.1.0",
         "@alfalab/hooks": "^1.6.1",
-        "@alfalab/utils": "^1.7.0"
+        "@alfalab/utils": "^1.8.0"
     },
     "devDependencies": {
         "dts-bundle-generator": "^5.4.0"
