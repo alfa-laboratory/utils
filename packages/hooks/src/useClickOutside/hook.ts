@@ -1,4 +1,4 @@
-import { useEffect, RefObject } from 'react';
+import { useEffect, RefObject, MouseEvent, TouchEvent } from 'react';
 
 export function useClickOutside(
     ref: RefObject<HTMLElement> | Array<RefObject<HTMLElement>>,
