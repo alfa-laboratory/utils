@@ -1,12 +1,18 @@
-import React from 'react';
+import { useEffect, RefObject } from 'react';
 
 export function useClickOutside(
-    ref: React.RefObject<HTMLElement>,
-    cb: (e: React.MouseEvent | React.TouchEvent) => void,
+    ref: RefObject<HTMLElement> | Array<RefObject<HTMLElement>>,
+    cb: (e: MouseEvent | TouchEvent) => void,
 ): void {
-    React.useEffect(() => {
-        const handler = (event: any) => {
-            if (!ref.current || ref.current.contains(event.target)) {
+    useEffect(() => {
+        const handler = (event: MouseEvent | TouchEvent) => {
+            const checkClickedElement = (el: RefObject<HTMLElement>) =>
+                !el.current || el.current.contains(event.target as Element);
+
+            if (
+                (Array.isArray(ref) && ref.find(checkClickedElement)) ||
+                (!Array.isArray(ref) && checkClickedElement(ref))
+            ) {
                 return;
             }
 
