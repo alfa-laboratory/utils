@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/alfa-laboratory/utils/compare/@alfalab/hooks@1.6.1...@alfalab/hooks@1.7.0) (2022-02-18)
+
+
+### Features
+
+* **use-click-outside:** add ability to pass array ([#86](https://github.com/alfa-laboratory/utils/issues/86)) ([e724617](https://github.com/alfa-laboratory/utils/commit/e7246173b3139549589e0acffe419a0f26a0b8ee))
+
+
+
+
+
 ## [1.6.1](https://github.com/alfa-laboratory/utils/compare/@alfalab/hooks@1.6.0...@alfalab/hooks@1.6.1) (2022-01-11)
 
 
