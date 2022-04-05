@@ -20,7 +20,7 @@ const CURRENCY_SYMBOLS = {
     CAD: '\u0043\u0024',
     KYD: '\u0024',
     CLP: '\u0024',
-    CNY: '\u00a5',
+    CNY: '\u5143',
     COP: '\u0024',
     CRC: '\u20a1',
     HRK: '\u006b\u006e',
